@@ -1,0 +1,71 @@
+from enum import Enum
+
+
+class UserRole(str, Enum):
+    CUSTOMER = "CUSTOMER"
+    SELLER = "SELLER"
+    ADMIN = "ADMIN"
+    SUPER_ADMIN = "SUPER_ADMIN"
+
+
+class VendorStatus(str, Enum):
+    PENDING_REVIEW = "PENDING_REVIEW"
+    APPROVED = "APPROVED"
+    SUSPENDED = "SUSPENDED"
+    REJECTED = "REJECTED"
+
+
+class ProductStatus(str, Enum):
+    DRAFT = "DRAFT"
+    PENDING_APPROVAL = "PENDING_APPROVAL"
+    PUBLISHED = "PUBLISHED"
+    ARCHIVED = "ARCHIVED"
+
+
+class MasterOrderStatus(str, Enum):
+    PENDING = "PENDING"
+    CONFIRMED = "CONFIRMED"
+    PARTIALLY_SHIPPED = "PARTIALLY_SHIPPED"
+    COMPLETED = "COMPLETED"
+    CANCELLED = "CANCELLED"
+
+
+class SubOrderStatus(str, Enum):
+    AWAITING_FULFILLMENT = "AWAITING_FULFILLMENT"
+    PACKED = "PACKED"
+    SHIPPED = "SHIPPED"
+    DELIVERED = "DELIVERED"
+    CANCELLED = "CANCELLED"
+
+
+class PaymentStatus(str, Enum):
+    PENDING = "PENDING"
+    PAID = "PAID"
+    FAILED = "FAILED"
+    REFUNDED = "REFUNDED"
+
+
+class PaymentMethod(str, Enum):
+    CASH_ON_DELIVERY = "CASH_ON_DELIVERY"
+    TEST_PAYMENT = "TEST_PAYMENT"
+    STRIPE_CARD = "STRIPE_CARD"
+
+
+class LedgerTransactionType(str, Enum):
+    CREDIT_SALE = "CREDIT_SALE"
+    DEBIT_COMMISSION = "DEBIT_COMMISSION"
+    DEBIT_PAYOUT = "DEBIT_PAYOUT"
+    CREDIT_REFUND = "CREDIT_REFUND"
+
+
+class PayoutStatus(str, Enum):
+    REQUESTED = "REQUESTED"
+    PROCESSING = "PROCESSING"
+    SETTLED = "SETTLED"
+    REJECTED = "REJECTED"
+
+
+class AddressType(str, Enum):
+    SHIPPING = "SHIPPING"
+    BILLING = "BILLING"
+    BOTH = "BOTH"
