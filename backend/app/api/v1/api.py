@@ -11,19 +11,23 @@ from app.api.v1.endpoints import (
     exports,
     fraud,
     inventory,
+    kitchen,
     ledger,
     notifications,
     orders,
     pricing,
+    procurement,
     products,
     promotions,
     recommendations,
     reports,
+    restaurant_ai,
     reviews,
     rma,
     search,
     shipping,
     support,
+    tables,
     tax,
     users,
     vendors,
@@ -63,3 +67,8 @@ api_router.include_router(exports.router, prefix="/exports", tags=["Catalog Expo
 api_router.include_router(fraud.router, prefix="/fraud", tags=["Fraud & Risk Engine"])
 api_router.include_router(workflows.router, prefix="/workflows", tags=["Workflow State Machine"])
 api_router.include_router(audit.router, prefix="/audit", tags=["Compliance Audit Logs"])
+
+# RestaurantOS ERP Endpoints
+api_router.include_router(tables.router, prefix="/restaurant/tables", tags=["Restaurant Tables & Floors"])
+api_router.include_router(kitchen.router, prefix="/restaurant/kitchen", tags=["Restaurant KDS & Kitchen"])
+api_router.include_router(restaurant_ai.router, prefix="/restaurant/ai", tags=["Restaurant Profit Engine & AI"])
