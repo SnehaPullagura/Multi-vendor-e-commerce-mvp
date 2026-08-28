@@ -9,7 +9,9 @@ from typing import Any, Dict, List, Optional, Set, Tuple
 from sqlalchemy import and_, desc, func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.models.order import Order, OrderItem, SubOrder
-from app.models.product import Category, Product, ProductVariant
+from app.models.category import Category
+from app.models.product import Product
+from app.models.variant import ProductVariant
 from app.models.review import Review
 
 

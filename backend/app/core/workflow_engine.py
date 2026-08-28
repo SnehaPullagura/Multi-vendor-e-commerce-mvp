@@ -44,19 +44,6 @@ class WorkflowTransition:
     description: str = ""
 
 
-@dataclass
-class WorkflowStepExecution:
-    step_id: str
-    action: str
-    performed_by: str
-    from_state: str
-    to_state: str
-    payload: Dict[str, Any]
-    timestamp: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
-    is_success: bool = True
-    error_message: Optional[str] = None
-
-
 class WorkflowDefinition:
     def __init__(self, domain: WorkflowDomain, initial_state: str):
         self.domain = domain
@@ -80,9 +67,10 @@ class WorkflowDefinition:
         guard: Optional[Callable[[Dict[str, Any]], bool]] = None,
         side_effects: Optional[List[Callable[[Dict[str, Any]], None]]] = None,
         description: str = "",
+        is_terminal: bool = False,
     ):
         self.add_state(from_state)
-        self.add_state(to_state)
+        self.add_state(to_state, is_terminal=is_terminal)
         t = WorkflowTransition(
             from_state=from_state,
             to_state=to_state,
@@ -97,13 +85,6 @@ class WorkflowDefinition:
 
     def get_transition(self, current_state: str, action: str) -> Optional[WorkflowTransition]:
         return self.transitions.get((current_state, action))
-
-    def get_available_actions(self, current_state: str, user_role: str) -> List[WorkflowTransition]:
-        avail = []
-        for (st, act), tr in self.transitions.items():
-            if st == current_state and (tr.required_role == "*" or tr.required_role == user_role):
-                avail.append(tr)
-        return avail
 
 
 class WorkflowEngine:

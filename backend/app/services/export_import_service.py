@@ -8,7 +8,9 @@ import io
 from typing import Any, Dict, List, Optional, Tuple
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
-from app.models.product import Category, Product, ProductVariant
+from app.models.category import Category
+from app.models.product import Product
+from app.models.variant import ProductVariant
 
 
 class ExportImportService:

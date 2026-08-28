@@ -1,344 +1,182 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState } from "react";
 import Link from "next/link";
-import {
-  Package,
-  Plus,
-  Trash2,
-  ArrowLeft,
-  CheckCircle,
-  AlertCircle,
-  Layers,
-} from "lucide-react";
-import { SellerLayout } from "@/components/layout/SellerLayout";
-import { Category } from "@/types";
+import { useRouter } from "next/navigation";
+import { ArrowLeft, Save, Plus, Trash2, Image as ImageIcon, Layers, Sparkles } from "lucide-react";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { ProductVariantMatrixEditor, VariantRow } from "@/components/seller/ProductVariantMatrixEditor";
+import { FileUpload } from "@/components/ui/FileUpload";
 import { api } from "@/lib/api";
-import { useToastStore } from "@/store/useToastStore";
-
-interface VariantForm {
-  sku: string;
-  title: string;
-  price: number;
-  cost_price?: number;
-  stock_quantity: number;
-  low_stock_threshold: number;
-}
 
 export default function NewProductPage() {
   const router = useRouter();
-  const { addToast } = useToastStore();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    title: "",
+    slug: "",
+    description: "",
+    brand: "",
+    base_price: 199.99,
+    category_id: "",
+    is_active: true,
+  });
 
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [categoryId, setCategoryId] = useState("");
-  const [brand, setBrand] = useState("");
-  const [basePrice, setBasePrice] = useState<number>(99.0);
-  const [isFeatured, setIsFeatured] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  // Dynamic Variants List
-  const [variants, setVariants] = useState<VariantForm[]>([
+  const [variants, setVariants] = useState<VariantRow[]>([
     {
-      sku: "PROD-SKU-01",
+      id: "var-init-1",
       title: "Standard Edition",
-      price: 99.0,
+      sku: "PROD-STD-001",
+      price: 199.99,
       stock_quantity: 50,
-      low_stock_threshold: 5,
     },
   ]);
 
-  useEffect(() => {
-    async function loadCategories() {
-      try {
-        const res = await api.get("/categories");
-        if (res.data.success) {
-          setCategories(res.data.data);
-          if (res.data.data.length > 0) {
-            setCategoryId(res.data.data[0].id);
-          }
-        }
-      } catch (err) {
-        console.error("Failed to load categories:", err);
-      }
-    }
-    loadCategories();
-  }, []);
-
-  const handleAddVariant = () => {
-    const nextIdx = variants.length + 1;
-    setVariants([
-      ...variants,
-      {
-        sku: `PROD-SKU-0${nextIdx}`,
-        title: `Variant ${nextIdx}`,
-        price: basePrice,
-        stock_quantity: 25,
-        low_stock_threshold: 5,
-      },
-    ]);
-  };
-
-  const handleRemoveVariant = (index: number) => {
-    if (variants.length <= 1) {
-      addToast({ type: "warning", title: "At least one variant is required" });
-      return;
-    }
-    setVariants(variants.filter((_, i) => i !== index));
-  };
-
-  const handleVariantChange = (index: number, field: keyof VariantForm, value: any) => {
-    const updated = [...variants];
-    updated[index] = { ...updated[index], [field]: value };
-    setVariants(updated);
+  const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = e.target.value;
+    const generatedSlug = val
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, "-")
+      .replace(/[^\w\-]+/g, "");
+    setFormData({ ...formData, title: val, slug: generatedSlug });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    if (!title || !description || !categoryId) {
-      addToast({ type: "error", title: "Please fill in all required product fields" });
-      return;
-    }
-
+    if (!formData.title) return;
+    setIsSubmitting(true);
     try {
-      setIsLoading(true);
       const payload = {
-        title,
-        description,
-        category_id: categoryId,
-        brand: brand || undefined,
-        base_price: Number(basePrice),
-        is_featured: isFeatured,
+        ...formData,
         variants: variants.map((v) => ({
-          sku: v.sku,
           title: v.title,
-          price: Number(v.price),
-          stock_quantity: Number(v.stock_quantity),
-          low_stock_threshold: Number(v.low_stock_threshold),
+          sku: v.sku,
+          price: v.price,
+          stock_quantity: v.stock_quantity,
         })),
       };
-
-      const res = await api.post("/products", payload);
-      if (res.data.success) {
-        addToast({
-          type: "success",
-          title: "Product Published!",
-          message: `${title} is now active on the marketplace catalog.`,
-        });
-        router.push("/seller/products");
-      }
-    } catch (err: any) {
-      addToast({
-        type: "error",
-        title: "Creation Failed",
-        message: err.response?.data?.message || "Could not create product.",
-      });
+      await api.post("/products", payload);
+      router.push("/seller/products");
+    } catch (err) {
+      console.error(err);
     } finally {
-      setIsLoading(false);
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <SellerLayout>
-      <div className="max-w-4xl mx-auto space-y-8">
-        {/* Header */}
-        <div className="flex items-center justify-between">
+    <div className="min-h-screen flex flex-col bg-slate-50">
+      <Navbar />
+
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full flex-1">
+        <div className="flex items-center justify-between mb-8">
           <div>
-            <Link
-              href="/seller/products"
-              className="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 hover:text-indigo-700 mb-2"
-            >
-              <ArrowLeft className="w-3.5 h-3.5" /> Back to Products
-            </Link>
-            <h1 className="text-2xl sm:text-3xl font-black text-gray-900">Add New Product</h1>
-            <p className="text-xs text-gray-500 mt-1">
-              Create a multi-variant SKU listing published directly to the customer storefront.
-            </p>
+            <h1 className="text-2xl sm:text-3xl font-black text-gray-900">Create Catalog Product</h1>
+            <p className="text-xs text-gray-500 mt-1">Add a new multi-variant product listing to your verified storefront.</p>
           </div>
+          <Link
+            href="/seller/products"
+            className="text-xs font-semibold text-gray-600 hover:text-gray-900 flex items-center gap-1 bg-white px-4 py-2 rounded-xl border border-gray-200"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" /> Back to Products
+          </Link>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-8">
+        <form onSubmit={handleSubmit} className="space-y-6">
           {/* General Information Card */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-sm space-y-6">
-            <h3 className="font-bold text-sm text-gray-900 border-b border-gray-100 pb-3 flex items-center gap-2">
-              <Package className="w-4 h-4 text-indigo-600" /> General Information
-            </h3>
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-sm space-y-5">
+            <h2 className="text-base font-bold text-gray-900">General Information</h2>
 
-            <div className="space-y-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1">Product Title</label>
+                <label className="block text-[11px] font-semibold text-gray-500 mb-1.5 uppercase tracking-wider">Product Title</label>
                 <input
                   type="text"
                   required
-                  placeholder="e.g., Quantum ANC Wireless Earbuds"
-                  value={title}
-                  onChange={(e) => setTitle(e.target.value)}
-                  className="w-full bg-gray-50 border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+                  value={formData.title}
+                  onChange={handleTitleChange}
+                  placeholder="e.g. Pro Wireless Reference Headphones"
+                  className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:ring-2 focus:ring-brand-500 outline-none"
                 />
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1">Category</label>
-                  <select
-                    value={categoryId}
-                    onChange={(e) => setCategoryId(e.target.value)}
-                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none"
-                  >
-                    {categories.map((c) => (
-                      <option key={c.id} value={c.id}>{c.name}</option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1">Brand Name</label>
-                  <input
-                    type="text"
-                    placeholder="e.g., Quantum"
-                    value={brand}
-                    onChange={(e) => setBrand(e.target.value)}
-                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1">Base Price ($)</label>
-                  <input
-                    type="number"
-                    step="0.01"
-                    required
-                    value={basePrice}
-                    onChange={(e) => setBasePrice(parseFloat(e.target.value) || 0)}
-                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none"
-                  />
-                </div>
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1">Detailed Description</label>
-                <textarea
-                  rows={5}
-                  required
-                  placeholder="Provide comprehensive details on specs, warranty, features, and package contents..."
-                  value={description}
-                  onChange={(e) => setDescription(e.target.value)}
-                  className="w-full bg-gray-50 border border-gray-200 rounded-xl p-3.5 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none"
-                />
-              </div>
-
-              <div className="flex items-center gap-2 pt-2">
+                <label className="block text-[11px] font-semibold text-gray-500 mb-1.5 uppercase tracking-wider">Brand Name</label>
                 <input
-                  type="checkbox"
-                  id="featuredCheck"
-                  checked={isFeatured}
-                  onChange={(e) => setIsFeatured(e.target.checked)}
-                  className="w-4 h-4 text-indigo-600 rounded"
+                  type="text"
+                  value={formData.brand}
+                  onChange={(e) => setFormData({ ...formData, brand: e.target.value })}
+                  placeholder="e.g. Quantum Audio Labs"
+                  className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:ring-2 focus:ring-brand-500 outline-none"
                 />
-                <label htmlFor="featuredCheck" className="text-xs font-semibold text-gray-700">
-                  Feature this product on homepage spotlight
-                </label>
+              </div>
+
+              <div>
+                <label className="block text-[11px] font-semibold text-gray-500 mb-1.5 uppercase tracking-wider">Base Price (USD)</label>
+                <input
+                  type="number"
+                  step="0.01"
+                  required
+                  value={formData.base_price}
+                  onChange={(e) => setFormData({ ...formData, base_price: parseFloat(e.target.value) || 0 })}
+                  className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm font-bold focus:ring-2 focus:ring-brand-500 outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-[11px] font-semibold text-gray-500 mb-1.5 uppercase tracking-wider">URL Slug</label>
+                <input
+                  type="text"
+                  value={formData.slug}
+                  onChange={(e) => setFormData({ ...formData, slug: e.target.value })}
+                  className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm font-mono focus:ring-2 focus:ring-brand-500 outline-none"
+                />
               </div>
             </div>
-          </div>
 
-          {/* Variant Matrix Builder Card */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-sm space-y-6">
-            <div className="flex items-center justify-between border-b border-gray-100 pb-3">
-              <h3 className="font-bold text-sm text-gray-900 flex items-center gap-2">
-                <Layers className="w-4 h-4 text-indigo-600" /> Variant Inventory Matrix ({variants.length})
-              </h3>
-              <button
-                type="button"
-                onClick={handleAddVariant}
-                className="text-xs font-bold text-indigo-600 hover:text-indigo-700 flex items-center gap-1"
-              >
-                <Plus className="w-3.5 h-3.5" /> Add Variant
-              </button>
-            </div>
-
-            <div className="space-y-4">
-              {variants.map((v, idx) => (
-                <div
-                  key={idx}
-                  className="bg-slate-50 p-4 rounded-2xl border border-gray-200/70 space-y-3 relative"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-gray-600">Edition #{idx + 1}</span>
-                    {variants.length > 1 && (
-                      <button
-                        type="button"
-                        onClick={() => handleRemoveVariant(idx)}
-                        className="text-rose-500 hover:text-rose-700 p-1"
-                      >
-                        <Trash2 className="w-3.5 h-3.5" />
-                      </button>
-                    )}
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 text-xs">
-                    <div>
-                      <label className="block font-semibold text-gray-700 mb-1">SKU Code</label>
-                      <input
-                        type="text"
-                        required
-                        value={v.sku}
-                        onChange={(e) => handleVariantChange(idx, "sku", e.target.value)}
-                        className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none font-mono"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block font-semibold text-gray-700 mb-1">Variant Title</label>
-                      <input
-                        type="text"
-                        required
-                        value={v.title}
-                        onChange={(e) => handleVariantChange(idx, "title", e.target.value)}
-                        className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block font-semibold text-gray-700 mb-1">Price ($)</label>
-                      <input
-                        type="number"
-                        step="0.01"
-                        required
-                        value={v.price}
-                        onChange={(e) => handleVariantChange(idx, "price", parseFloat(e.target.value) || 0)}
-                        className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block font-semibold text-gray-700 mb-1">Stock Units</label>
-                      <input
-                        type="number"
-                        required
-                        value={v.stock_quantity}
-                        onChange={(e) => handleVariantChange(idx, "stock_quantity", parseInt(e.target.value) || 0)}
-                        className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none"
-                      />
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <div>
+              <label className="block text-[11px] font-semibold text-gray-500 mb-1.5 uppercase tracking-wider">Technical Description</label>
+              <textarea
+                rows={4}
+                value={formData.description}
+                onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+                placeholder="Comprehensive technical specifications, features, materials, and warranty information..."
+                className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:ring-2 focus:ring-brand-500 outline-none resize-none"
+              />
             </div>
           </div>
 
-          <button
-            type="submit"
-            disabled={isLoading}
-            className="w-full py-4 rounded-full bg-indigo-600 hover:bg-indigo-700 font-bold text-white shadow-md hover:shadow-lg transition-all text-sm disabled:bg-gray-300"
-          >
-            {isLoading ? "Publishing Listing..." : "Publish Product Listing"}
-          </button>
+          {/* Variants Table */}
+          <ProductVariantMatrixEditor variants={variants} onChange={setVariants} basePrice={formData.base_price} />
+
+          {/* Media Upload */}
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-sm space-y-4">
+            <h2 className="text-base font-bold text-gray-900">Product Media & Gallery</h2>
+            <FileUpload onUpload={(files) => console.log(files)} />
+          </div>
+
+          {/* Actions */}
+          <div className="flex justify-end gap-3 pt-4">
+            <Link
+              href="/seller/products"
+              className="px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-xs rounded-2xl transition-all"
+            >
+              Cancel
+            </Link>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="px-8 py-3 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs rounded-2xl shadow-lg shadow-brand-500/30 flex items-center gap-2 transition-all disabled:opacity-50"
+            >
+              <Save className="w-4 h-4" /> {isSubmitting ? "Publishing SKU..." : "Publish Product Listing"}
+            </button>
+          </div>
         </form>
-      </div>
-    </SellerLayout>
+      </main>
+
+      <Footer />
+    </div>
   );
 }
