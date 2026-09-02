@@ -1,9 +1,7 @@
 # Dependencies
 node_modules/
 .venv/
-__pycache__/
-*.pyc
-
+backend\.env
 # Builds
 .next/
 dist/
