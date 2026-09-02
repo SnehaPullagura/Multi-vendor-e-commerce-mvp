@@ -29,13 +29,16 @@ export default function HomePage() {
       try {
         const [catRes, prodRes, vendRes] = await Promise.all([
           api.get("/categories"),
-          api.get("/products/list?limit=8"),
-          api.get("/vendors/public/list?limit=4"),
+          api.get("/products/list?page_size=8"),
+          api.get("/vendors?limit=4"),
         ]);
 
         if (catRes.data.success) setCategories(catRes.data.data);
         if (prodRes.data.success) setFeaturedProducts(prodRes.data.data.items);
-        if (vendRes.data.success) setVendors(vendRes.data.data.items);
+        if (vendRes.data.success) {
+          const vendorData = vendRes.data.data;
+          setVendors(Array.isArray(vendorData) ? vendorData : vendorData.items || []);
+        }
       } catch (err) {
         console.error("Failed to load home page content:", err);
       } finally {
