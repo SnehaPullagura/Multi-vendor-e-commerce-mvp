@@ -21,6 +21,50 @@ import { api } from "@/lib/api";
 import { formatCurrency } from "@/lib/utils";
 import { useCartStore } from "@/store/useCartStore";
 
+function getProductFallbackImage(product: Product): string {
+  const text = `${product.title || ""} ${product.brand || ""} ${(product as any).category?.name || ""}`.toLowerCase();
+  if (text.includes("wallet") || text.includes("case") || text.includes("magsafe") || text.includes("card")) {
+    return "https://images.unsplash.com/photo-1544816155-12df9643f363?w=800";
+  }
+  if (text.includes("deskmat") || text.includes("mat") || text.includes("pad") || text.includes("felt")) {
+    return "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800";
+  }
+  if (text.includes("webcam") || text.includes("camera") || text.includes("stream") || text.includes("pulsecam")) {
+    return "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=800";
+  }
+  if (text.includes("projector") || text.includes("beam") || text.includes("monitor") || text.includes("display")) {
+    return "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800";
+  }
+  if (text.includes("keyboard") || text.includes("keycap")) {
+    return "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800";
+  }
+  if (text.includes("headphone") || text.includes("audio") || text.includes("sound") || text.includes("anc") || text.includes("earphone")) {
+    return "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800";
+  }
+  if (text.includes("phone") || text.includes("smartphone") || text.includes("titan") || text.includes("5g") || text.includes("nova")) {
+    return "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800";
+  }
+  if (text.includes("hoodie") || text.includes("fleece") || text.includes("cotton") || text.includes("apparel") || text.includes("jacket") || text.includes("shirt")) {
+    return "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800";
+  }
+  if (text.includes("sneaker") || text.includes("shoe") || text.includes("footwear") || text.includes("leather") || text.includes("boot")) {
+    return "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800";
+  }
+  if (text.includes("watch") || text.includes("timepiece")) {
+    return "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800";
+  }
+  if (text.includes("lamp") || text.includes("light") || text.includes("chair") || text.includes("desk") || text.includes("furniture")) {
+    return "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800";
+  }
+  if (text.includes("serum") || text.includes("skin") || text.includes("lotion") || text.includes("cream") || text.includes("oil")) {
+    return "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800";
+  }
+  if (text.includes("coffee") || text.includes("espresso") || text.includes("brew") || text.includes("bean") || text.includes("tea")) {
+    return "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800";
+  }
+  return "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800";
+}
+
 export default function ProductDetailPage() {
   const params = useParams();
   const router = useRouter();
@@ -28,6 +72,7 @@ export default function ProductDetailPage() {
 
   const [product, setProduct] = useState<Product | null>(null);
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string>("");
   const [quantity, setQuantity] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
   const [isAdding, setIsAdding] = useState(false);
@@ -42,6 +87,11 @@ export default function ProductDetailPage() {
         if (res.data.success) {
           const prod: Product = res.data.data;
           setProduct(prod);
+          if (prod.images && prod.images.length > 0 && prod.images[0].image_url) {
+            setSelectedImage(prod.images[0].image_url);
+          } else {
+            setSelectedImage(getProductFallbackImage(prod));
+          }
           if (prod.variants && prod.variants.length > 0) {
             setSelectedVariant(prod.variants[0]);
           }
@@ -149,18 +199,14 @@ export default function ProductDetailPage() {
           {/* Left: Product Images */}
           <div className="flex flex-col gap-4">
             <div className="aspect-square w-full rounded-2xl bg-slate-100 border border-gray-100 flex items-center justify-center relative overflow-hidden">
-              {product.images && product.images.length > 0 && product.images[0].image_url ? (
-                <img
-                  src={product.images[0].image_url}
-                  alt={product.title}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    (e.target as HTMLElement).style.display = "none";
-                  }}
-                />
-              ) : (
-                <div className="text-8xl select-none">📦</div>
-              )}
+              <img
+                src={selectedImage || getProductFallbackImage(product)}
+                alt={product.title}
+                className="w-full h-full object-cover"
+                onError={() => {
+                  setSelectedImage(getProductFallbackImage(product));
+                }}
+              />
               {product.is_featured && (
                 <span className="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
                   FEATURED PICK
@@ -174,7 +220,10 @@ export default function ProductDetailPage() {
                 {product.images.map((img, idx) => (
                   <div
                     key={img.id || idx}
-                    className="aspect-square rounded-xl bg-slate-100 border border-gray-200 overflow-hidden cursor-pointer hover:border-brand-600 transition-colors"
+                    onClick={() => setSelectedImage(img.image_url)}
+                    className={`aspect-square rounded-xl bg-slate-100 border-2 overflow-hidden cursor-pointer transition-all ${
+                      selectedImage === img.image_url ? "border-brand-600 shadow-sm" : "border-gray-200 hover:border-gray-300"
+                    }`}
                   >
                     <img src={img.image_url} alt={`${product.title} view ${idx + 1}`} className="w-full h-full object-cover" />
                   </div>

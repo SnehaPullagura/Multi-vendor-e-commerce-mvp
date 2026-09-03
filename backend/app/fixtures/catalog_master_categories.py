@@ -98,7 +98,7 @@ CATEGORIES = [
                 "brand": "AeroCharge",
                 "base_price": 79.99,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1622445262464-84b1456045b6?w=800",
+                "image_url": "https://images.unsplash.com/photo-1586816879360-004f5b0c51e3?w=800",
                 "variants": [
                     {"title": "Space Gray", "sku": "ELEC-CHG-07-GRY", "price": 79.99, "stock_quantity": 80, "attributes": {"color": "Space Gray"}},
                     {"title": "Glacier White", "sku": "ELEC-CHG-07-WHT", "price": 79.99, "stock_quantity": 60, "attributes": {"color": "Glacier White"}},
@@ -111,7 +111,7 @@ CATEGORIES = [
                 "brand": "OmniDrone",
                 "base_price": 499.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800",
+                "image_url": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800",
                 "variants": [
                     {"title": "Fly More Combo", "sku": "ELEC-DRN-08-FMC", "price": 499.00, "stock_quantity": 25, "attributes": {"package": "Fly More"}},
                 ],
@@ -123,7 +123,7 @@ CATEGORIES = [
                 "brand": "HyperLink",
                 "base_price": 279.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1544652478-6653e09f18a2?w=800",
+                "image_url": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800",
                 "variants": [
                     {"title": "Titanium Grey", "sku": "ELEC-HUB-09-TGY", "price": 279.00, "stock_quantity": 40, "attributes": {"finish": "Titanium"}},
                 ],
@@ -135,7 +135,7 @@ CATEGORIES = [
                 "brand": "AeroSound",
                 "base_price": 129.99,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800",
+                "image_url": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800",
                 "variants": [
                     {"title": "Matte Obsidian", "sku": "ELEC-BUD-10-OBS", "price": 129.99, "stock_quantity": 75, "attributes": {"color": "Obsidian"}},
                     {"title": "Ceramic White", "sku": "ELEC-BUD-10-WHT", "price": 129.99, "stock_quantity": 65, "attributes": {"color": "White"}},
@@ -148,7 +148,7 @@ CATEGORIES = [
                 "brand": "Vortex",
                 "base_price": 119.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800",
+                "image_url": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800",
                 "variants": [
                     {"title": "Stealth Black", "sku": "ELEC-MSE-11-BLK", "price": 119.00, "stock_quantity": 50, "attributes": {"color": "Black"}},
                 ],
@@ -160,7 +160,7 @@ CATEGORIES = [
                 "brand": "SpectraSound",
                 "base_price": 89.95,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=800",
+                "image_url": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=800",
                 "variants": [
                     {"title": "Forest Green", "sku": "ELEC-SPK-12-GRN", "price": 89.95, "stock_quantity": 70, "attributes": {"color": "Forest Green"}},
                 ],
@@ -172,7 +172,7 @@ CATEGORIES = [
                 "brand": "PulseStudio",
                 "base_price": 199.99,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800",
+                "image_url": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800",
                 "variants": [
                     {"title": "Matte Anodized", "sku": "ELEC-CAP-13-ANO", "price": 199.99, "stock_quantity": 30, "attributes": {"finish": "Anodized"}},
                 ],
@@ -184,7 +184,7 @@ CATEGORIES = [
                 "brand": "SpectraView",
                 "base_price": 69.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1534972195531-a756b112697b?w=800",
+                "image_url": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800",
                 "variants": [
                     {"title": "Space Gray CNC Aluminum", "sku": "ELEC-LGT-14-GRY", "price": 69.00, "stock_quantity": 90, "attributes": {"color": "Space Gray"}},
                 ],
@@ -196,7 +196,7 @@ CATEGORIES = [
                 "brand": "HyperLink",
                 "base_price": 329.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800",
+                "image_url": "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800",
                 "variants": [
                     {"title": "4TB Tactical Orange", "sku": "ELEC-SSD-15-4TB", "price": 329.00, "stock_quantity": 35, "attributes": {"capacity": "4TB"}},
                 ],
@@ -208,7 +208,7 @@ CATEGORIES = [
                 "brand": "StudioMaster",
                 "base_price": 899.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800",
+                "image_url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
                 "variants": [
                     {"title": "Matched Studio Pair / Matte Black", "sku": "ELEC-MON-16-PAIR", "price": 899.00, "stock_quantity": 15, "attributes": {"color": "Black"}},
                 ],
@@ -220,7 +220,7 @@ CATEGORIES = [
                 "brand": "AeroCharge",
                 "base_price": 65.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800",
+                "image_url": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=800",
                 "variants": [
                     {"title": "Stealth Black", "sku": "ELEC-GAN-17-BLK", "price": 65.00, "stock_quantity": 110, "attributes": {"color": "Black"}},
                 ],
@@ -232,7 +232,7 @@ CATEGORIES = [
                 "brand": "Nova",
                 "base_price": 449.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800",
+                "image_url": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800",
                 "variants": [
                     {"title": "Orange Alpine Loop", "sku": "ELEC-WAT-18-ORG", "price": 449.00, "stock_quantity": 40, "attributes": {"band": "Alpine Orange"}},
                     {"title": "Titanium Trail Band", "sku": "ELEC-WAT-18-TI", "price": 469.00, "stock_quantity": 30, "attributes": {"band": "Titanium"}},
@@ -245,7 +245,7 @@ CATEGORIES = [
                 "brand": "Chronos",
                 "base_price": 79.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+                "image_url": "https://images.unsplash.com/photo-1544652478-6653e09f18a2?w=800",
                 "variants": [
                     {"title": "Anodized Burgundy", "sku": "ELEC-PAD-19-BUR", "price": 79.00, "stock_quantity": 45, "attributes": {"color": "Burgundy"}},
                 ],
@@ -257,7 +257,7 @@ CATEGORIES = [
                 "brand": "HyperLink",
                 "base_price": 399.99,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1544652478-6653e09f18a2?w=800",
+                "image_url": "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800",
                 "variants": [
                     {"title": "2-Unit Whole Home Pack", "sku": "ELEC-NET-20-2PK", "price": 399.99, "stock_quantity": 25, "attributes": {"units": "2-Pack"}},
                 ],
@@ -269,7 +269,7 @@ CATEGORIES = [
                 "brand": "PulseStudio",
                 "base_price": 149.99,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800",
+                "image_url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800",
                 "variants": [
                     {"title": "Matte Obsidian", "sku": "ELEC-STR-21-OBS", "price": 149.99, "stock_quantity": 50, "attributes": {"color": "Obsidian"}},
                 ],
@@ -281,7 +281,7 @@ CATEGORIES = [
                 "brand": "SpectraView",
                 "base_price": 389.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800",
+                "image_url": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800",
                 "variants": [
                     {"title": "Slate with Leather Folio", "sku": "ELEC-INK-22-FOL", "price": 389.00, "stock_quantity": 30, "attributes": {"case": "Leather Folio"}},
                 ],
@@ -293,7 +293,7 @@ CATEGORIES = [
                 "brand": "OmniDrone",
                 "base_price": 429.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=800",
+                "image_url": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800",
                 "variants": [
                     {"title": "Standard Creator Kit", "sku": "ELEC-CAM-23-KIT", "price": 429.00, "stock_quantity": 35, "attributes": {"kit": "Creator"}},
                 ],
@@ -305,7 +305,7 @@ CATEGORIES = [
                 "brand": "AetherAudio",
                 "base_price": 499.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=800",
+                "image_url": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800",
                 "variants": [
                     {"title": "Machined Brass Edition", "sku": "ELEC-DAP-24-BRS", "price": 499.00, "stock_quantity": 20, "attributes": {"material": "Brass"}},
                 ],
@@ -317,7 +317,7 @@ CATEGORIES = [
                 "brand": "Nova",
                 "base_price": 119.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800",
+                "image_url": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800",
                 "variants": [
                     {"title": "Chalk White Fabric", "slug": "ELEC-HUB-25-CHK", "sku": "ELEC-HUB-25-CHK", "price": 119.00, "stock_quantity": 60, "attributes": {"color": "Chalk White"}},
                 ],
@@ -329,7 +329,7 @@ CATEGORIES = [
                 "brand": "Chronos",
                 "base_price": 139.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800",
+                "image_url": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800",
                 "variants": [
                     {"title": "Matte Stealth Black", "sku": "ELEC-ARM-26-BLK", "price": 139.00, "stock_quantity": 40, "attributes": {"color": "Black"}},
                 ],
@@ -341,7 +341,7 @@ CATEGORIES = [
                 "brand": "HyperLink",
                 "base_price": 549.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800",
+                "image_url": "https://images.unsplash.com/photo-1585336261026-41475704a29c?w=800",
                 "variants": [
                     {"title": "Diskless Enclosure", "sku": "ELEC-NAS-27-DSK", "price": 549.00, "stock_quantity": 18, "attributes": {"configuration": "Diskless"}},
                 ],
@@ -353,7 +353,7 @@ CATEGORIES = [
                 "brand": "Nova",
                 "base_price": 169.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1558002038-1055907df827?w=800",
+                "image_url": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=800",
                 "variants": [
                     {"title": "Satin Nickel", "sku": "ELEC-LCK-28-NCK", "price": 169.00, "stock_quantity": 45, "attributes": {"finish": "Satin Nickel"}},
                 ],
@@ -365,7 +365,7 @@ CATEGORIES = [
                 "brand": "SpectraView",
                 "base_price": 149.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800",
+                "image_url": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800",
                 "variants": [
                     {"title": "9-Panel Triangle Kit", "sku": "ELEC-PNL-29-9PK", "price": 149.00, "stock_quantity": 50, "attributes": {"panels": "9-Pack"}},
                 ],
@@ -377,7 +377,7 @@ CATEGORIES = [
                 "brand": "AeroCharge",
                 "base_price": 99.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800",
+                "image_url": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800",
                 "variants": [
                     {"title": "Space Gray Aluminum", "sku": "ELEC-PBK-30-GRY", "price": 99.00, "stock_quantity": 80, "attributes": {"color": "Space Gray"}},
                 ],
@@ -389,7 +389,7 @@ CATEGORIES = [
                 "brand": "StudioMaster",
                 "base_price": 45.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800",
+                "image_url": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800",
                 "variants": [
                     {"title": "Medium / 5-8 Inch Speakers", "sku": "ELEC-PAD-31-MED", "price": 45.00, "stock_quantity": 90, "attributes": {"size": "Medium"}},
                 ],
@@ -401,7 +401,7 @@ CATEGORIES = [
                 "brand": "PulseStudio",
                 "base_price": 129.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+                "image_url": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800",
                 "variants": [
                     {"title": "Graphite Black", "sku": "ELEC-WBC-32-BLK", "price": 129.00, "stock_quantity": 65, "attributes": {"color": "Graphite"}},
                 ],
@@ -426,7 +426,7 @@ CATEGORIES = [
                 "brand": "Chronos",
                 "base_price": 42.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+                "image_url": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800",
                 "variants": [
                     {"title": "Heather Charcoal / Black", "sku": "ELEC-MAT-34-CHR", "price": 42.00, "stock_quantity": 110, "attributes": {"color": "Charcoal"}},
                 ],
@@ -438,7 +438,7 @@ CATEGORIES = [
                 "brand": "SpectraView",
                 "base_price": 349.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=800",
+                "image_url": "https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?w=800",
                 "variants": [
                     {"title": "Midnight Slate", "sku": "ELEC-PRJ-35-SLT", "price": 349.00, "stock_quantity": 30, "attributes": {"color": "Slate"}},
                 ],
@@ -464,7 +464,7 @@ CATEGORIES = [
                 "brand": "UrbanStyle",
                 "base_price": 185.00,
                 "is_featured": True,
-                "image_url": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800",
+                "image_url": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800",
                 "variants": [
                     {"title": "EU 41 / US 8", "sku": "FASH-SNK-01-41", "price": 185.00, "stock_quantity": 30, "attributes": {"size": "EU 41"}},
                     {"title": "EU 42 / US 9", "sku": "FASH-SNK-01-42", "price": 185.00, "stock_quantity": 40, "attributes": {"size": "EU 42"}},
@@ -478,7 +478,7 @@ CATEGORIES = [
                 "brand": "UrbanStyle",
                 "base_price": 95.00,
                 "is_featured": True,
-                "image_url": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800",
+                "image_url": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800",
                 "variants": [
                     {"title": "Onyx Black / Medium", "sku": "FASH-HOD-02-BLK-M", "price": 95.00, "stock_quantity": 50, "attributes": {"size": "M", "color": "Black"}},
                     {"title": "Onyx Black / Large", "sku": "FASH-HOD-02-BLK-L", "price": 95.00, "stock_quantity": 45, "attributes": {"size": "L", "color": "Black"}},
@@ -492,7 +492,7 @@ CATEGORIES = [
                 "brand": "UrbanStyle",
                 "base_price": 165.00,
                 "is_featured": True,
-                "image_url": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=800",
+                "image_url": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800",
                 "variants": [
                     {"title": "32W x 32L / Raw Indigo", "sku": "FASH-DNM-03-3232", "price": 165.00, "stock_quantity": 25, "attributes": {"waist": "32", "length": "32"}},
                     {"title": "34W x 32L / Raw Indigo", "sku": "FASH-DNM-03-3432", "price": 165.00, "stock_quantity": 25, "attributes": {"waist": "34", "length": "32"}},
@@ -505,7 +505,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 115.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=800",
+                "image_url": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800",
                 "variants": [
                     {"title": "Camel Melange / M", "sku": "FASH-SWT-04-CML-M", "price": 115.00, "stock_quantity": 35, "attributes": {"size": "M", "color": "Camel"}},
                     {"title": "Navy Blue / L", "sku": "FASH-SWT-04-NAV-L", "price": 115.00, "stock_quantity": 40, "attributes": {"size": "L", "color": "Navy"}},
@@ -518,7 +518,7 @@ CATEGORIES = [
                 "brand": "UrbanStyle",
                 "base_price": 130.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?w=800",
+                "image_url": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800",
                 "variants": [
                     {"title": "Olive Drab / Size 32", "sku": "FASH-CRG-05-OLV-32", "price": 130.00, "stock_quantity": 40, "attributes": {"size": "32", "color": "Olive"}},
                 ],
@@ -530,7 +530,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 385.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800",
+                "image_url": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800",
                 "variants": [
                     {"title": "Charcoal / Size 40 (US M)", "sku": "FASH-COT-06-CHR-40", "price": 385.00, "stock_quantity": 20, "attributes": {"size": "40", "color": "Charcoal"}},
                 ],
@@ -542,7 +542,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 245.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1638247025967-b4e38f787b76?w=800",
+                "image_url": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800",
                 "variants": [
                     {"title": "Espresso Dark Brown / EU 42", "sku": "FASH-BOT-07-ESP-42", "price": 245.00, "stock_quantity": 25, "attributes": {"size": "EU 42", "color": "Espresso"}},
                     {"title": "Matte Black / EU 43", "sku": "FASH-BOT-07-BLK-43", "price": 245.00, "stock_quantity": 25, "attributes": {"size": "EU 43", "color": "Black"}},
@@ -555,7 +555,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 85.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800",
+                "image_url": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800",
                 "variants": [
                     {"title": "Natural Ecru / Medium", "sku": "FASH-SHR-08-ECR-M", "price": 85.00, "stock_quantity": 45, "attributes": {"size": "M", "color": "Ecru"}},
                     {"title": "Sky Blue / Large", "sku": "FASH-SHR-08-SKY-L", "price": 85.00, "stock_quantity": 40, "attributes": {"size": "L", "color": "Sky Blue"}},
@@ -568,7 +568,7 @@ CATEGORIES = [
                 "brand": "UrbanStyle",
                 "base_price": 210.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800",
+                "image_url": "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?w=800",
                 "variants": [
                     {"title": "Field Tan / Size L", "sku": "FASH-JKT-09-TAN-L", "price": 210.00, "stock_quantity": 25, "attributes": {"size": "L", "color": "Field Tan"}},
                 ],
@@ -580,7 +580,7 @@ CATEGORIES = [
                 "brand": "UrbanStyle",
                 "base_price": 220.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800",
+                "image_url": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=800",
                 "variants": [
                     {"title": "Cognac Brown", "sku": "FASH-BAG-10-COG", "price": 220.00, "stock_quantity": 30, "attributes": {"color": "Cognac"}},
                     {"title": "Midnight Black", "sku": "FASH-BAG-10-BLK", "price": 220.00, "stock_quantity": 35, "attributes": {"color": "Black"}},
@@ -593,7 +593,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 98.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800",
+                "image_url": "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=800",
                 "variants": [
                     {"title": "British Khaki / 32x32", "sku": "FASH-CHN-11-KHK-32", "price": 98.00, "stock_quantity": 50, "attributes": {"size": "32x32", "color": "Khaki"}},
                 ],
@@ -605,7 +605,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 195.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=800",
+                "image_url": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800",
                 "variants": [
                     {"title": "Snuff Suede / EU 42", "sku": "FASH-LOF-12-SNF-42", "price": 195.00, "stock_quantity": 25, "attributes": {"size": "EU 42", "color": "Snuff Suede"}},
                 ],
@@ -617,7 +617,7 @@ CATEGORIES = [
                 "brand": "UrbanStyle",
                 "base_price": 42.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800",
+                "image_url": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800",
                 "variants": [
                     {"title": "Vintage White / M", "sku": "FASH-TEE-13-WHT-M", "price": 42.00, "stock_quantity": 80, "attributes": {"size": "M", "color": "White"}},
                     {"title": "Vintage White / L", "sku": "FASH-TEE-13-WHT-L", "price": 42.00, "stock_quantity": 80, "attributes": {"size": "L", "color": "White"}},
@@ -631,7 +631,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 75.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=800",
+                "image_url": "https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=800",
                 "variants": [
                     {"title": "London Tan", "sku": "FASH-WLT-14-TAN", "price": 75.00, "stock_quantity": 60, "attributes": {"color": "London Tan"}},
                 ],
@@ -643,7 +643,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 295.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800",
+                "image_url": "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=800",
                 "variants": [
                     {"title": "Navy Blue / 40R", "sku": "FASH-BLZ-15-NAV-40", "price": 295.00, "stock_quantity": 25, "attributes": {"size": "40R", "color": "Navy"}},
                 ],
@@ -655,7 +655,7 @@ CATEGORIES = [
                 "brand": "UrbanStyle",
                 "base_price": 275.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1544441893-675973e31985?w=800",
+                "image_url": "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800",
                 "variants": [
                     {"title": "Stealth Black / L", "sku": "FASH-PRK-16-BLK-L", "price": 275.00, "stock_quantity": 30, "attributes": {"size": "L", "color": "Black"}},
                 ],
@@ -679,7 +679,7 @@ CATEGORIES = [
                 "brand": "UrbanStyle",
                 "base_price": 110.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=800",
+                "image_url": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800",
                 "variants": [
                     {"title": "Caramel Brown / L", "sku": "FASH-OVR-18-CRM-L", "price": 110.00, "stock_quantity": 35, "attributes": {"size": "L", "color": "Caramel"}},
                 ],
@@ -691,7 +691,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 60.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=800",
+                "image_url": "https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=800",
                 "variants": [
                     {"title": "Dark Havana Brown / 34", "sku": "FASH-BLT-19-HAV-34", "price": 60.00, "stock_quantity": 50, "attributes": {"size": "34", "color": "Havana"}},
                 ],
@@ -703,7 +703,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 65.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?w=800",
+                "image_url": "https://images.unsplash.com/photo-1582533561751-ef6f6ab93a2e?w=800",
                 "variants": [
                     {"title": "Oatmeal Melange", "sku": "FASH-HAT-20-OAT", "price": 65.00, "stock_quantity": 70, "attributes": {"color": "Oatmeal"}},
                     {"title": "Charcoal Slate", "sku": "FASH-HAT-20-CHR", "price": 65.00, "stock_quantity": 60, "attributes": {"color": "Charcoal"}},
@@ -716,7 +716,7 @@ CATEGORIES = [
                 "brand": "UrbanStyle",
                 "base_price": 85.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=800",
+                "image_url": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800",
                 "variants": [
                     {"title": "Washed Black / L", "sku": "FASH-SWP-21-BLK-L", "price": 85.00, "stock_quantity": 40, "attributes": {"size": "L", "color": "Black"}},
                 ],
@@ -728,7 +728,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 79.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800",
+                "image_url": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800",
                 "variants": [
                     {"title": "Oxford Blue / 15.5", "sku": "FASH-OCB-22-BLU-15", "price": 79.00, "stock_quantity": 45, "attributes": {"size": "15.5", "color": "Blue"}},
                     {"title": "Crisp White / 16.0", "sku": "FASH-OCB-22-WHT-16", "price": 79.00, "stock_quantity": 45, "attributes": {"size": "16.0", "color": "White"}},
@@ -753,7 +753,7 @@ CATEGORIES = [
                 "brand": "UrbanStyle",
                 "base_price": 125.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=800",
+                "image_url": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800",
                 "variants": [
                     {"title": "Tortoiseshell / Green Lens", "sku": "FASH-SUN-24-TOR", "price": 125.00, "stock_quantity": 50, "attributes": {"color": "Tortoiseshell"}},
                 ],
@@ -765,7 +765,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 175.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=800",
+                "image_url": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800",
                 "variants": [
                     {"title": "Mid Grey Flannel / 32", "sku": "FASH-FLN-25-GRY-32", "price": 175.00, "stock_quantity": 30, "attributes": {"size": "32", "color": "Grey"}},
                 ],
@@ -777,7 +777,7 @@ CATEGORIES = [
                 "brand": "UrbanStyle",
                 "base_price": 75.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800",
+                "image_url": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800",
                 "variants": [
                     {"title": "Charcoal Heather / L", "sku": "FASH-THM-26-CHR-L", "price": 75.00, "stock_quantity": 40, "attributes": {"size": "L", "color": "Charcoal"}},
                 ],
@@ -789,7 +789,7 @@ CATEGORIES = [
                 "brand": "UrbanStyle",
                 "base_price": 110.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1544441893-675973e31985?w=800",
+                "image_url": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=800",
                 "variants": [
                     {"title": "Matte Navy / L", "sku": "FASH-VST-27-NAV-L", "price": 110.00, "stock_quantity": 35, "attributes": {"size": "L", "color": "Navy"}},
                 ],
@@ -801,7 +801,7 @@ CATEGORIES = [
                 "brand": "UrbanStyle",
                 "base_price": 85.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=800",
+                "image_url": "https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?w=800",
                 "variants": [
                     {"title": "Olive Canvas / Tan Leather", "sku": "FASH-TOT-28-OLV", "price": 85.00, "stock_quantity": 55, "attributes": {"color": "Olive"}},
                 ],
@@ -813,7 +813,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 68.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1625910513413-56832db2f0a1?w=800",
+                "image_url": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800",
                 "variants": [
                     {"title": "Alabaster Cream / M", "sku": "FASH-POL-29-CRM-M", "price": 68.00, "stock_quantity": 40, "attributes": {"size": "M", "color": "Cream"}},
                 ],
@@ -825,7 +825,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 45.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=800",
+                "image_url": "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=800",
                 "variants": [
                     {"title": "Cognac Brown", "sku": "FASH-CRD-30-COG", "price": 45.00, "stock_quantity": 90, "attributes": {"color": "Cognac"}},
                 ],
@@ -837,7 +837,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 79.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?w=800",
+                "image_url": "https://images.unsplash.com/photo-1583744946564-b52ac1c389c8?w=800",
                 "variants": [
                     {"title": "Stewart Tartan / Olive", "sku": "FASH-SCF-31-OLV", "price": 79.00, "stock_quantity": 60, "attributes": {"color": "Olive"}},
                 ],
@@ -849,7 +849,7 @@ CATEGORIES = [
                 "brand": "UrbanStyle",
                 "base_price": 165.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=800",
+                "image_url": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800",
                 "variants": [
                     {"title": "Sand Suede / EU 42", "sku": "FASH-DRB-32-SND-42", "price": 165.00, "stock_quantity": 25, "attributes": {"size": "EU 42", "color": "Sand"}},
                 ],
@@ -861,7 +861,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 89.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1514327605112-b887c0e61c0a?w=800",
+                "image_url": "https://images.unsplash.com/photo-1591561954557-26941169b49e?w=800",
                 "variants": [
                     {"title": "Mushroom Taupe / Size 58", "sku": "FASH-FED-33-TAU-58", "price": 89.00, "stock_quantity": 30, "attributes": {"size": "58", "color": "Taupe"}},
                 ],
@@ -873,7 +873,7 @@ CATEGORIES = [
                 "brand": "UrbanStyle",
                 "base_price": 36.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1582966772680-860e372bb558?w=800",
+                "image_url": "https://images.unsplash.com/photo-1544441893-675973e31985?w=800",
                 "variants": [
                     {"title": "Trio Pack (Black / Grey / Olive)", "sku": "FASH-SCK-34-3PK", "price": 36.00, "stock_quantity": 100, "attributes": {"pack": "3-Pack"}},
                 ],
@@ -885,7 +885,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 340.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800",
+                "image_url": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=800",
                 "variants": [
                     {"title": "Beige / Houndstooth Size 40", "sku": "FASH-CAR-35-BGE-40", "price": 340.00, "stock_quantity": 18, "attributes": {"size": "40", "color": "Beige"}},
                 ],
@@ -911,7 +911,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 649.00,
                 "is_featured": True,
-                "image_url": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800",
+                "image_url": "https://images.unsplash.com/photo-1580481077111-9a70f2f354f3?w=800",
                 "variants": [
                     {"title": "Solid White Oak / Matte Black Frame", "sku": "HOME-DSK-01-OAK", "price": 649.00, "stock_quantity": 20, "attributes": {"wood": "White Oak", "frame": "Black"}},
                     {"title": "Solid Walnut / White Frame", "sku": "HOME-DSK-01-WAL", "price": 749.00, "stock_quantity": 15, "attributes": {"wood": "Walnut", "frame": "White"}},
@@ -924,7 +924,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 429.00,
                 "is_featured": True,
-                "image_url": "https://images.unsplash.com/photo-1580481077195-731da99f7999?w=800",
+                "image_url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
                 "variants": [
                     {"title": "Graphite Grey", "sku": "HOME-CHR-02-GRY", "price": 429.00, "stock_quantity": 35, "attributes": {"color": "Graphite"}},
                 ],
@@ -936,7 +936,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 54.00,
                 "is_featured": True,
-                "image_url": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800",
+                "image_url": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800",
                 "variants": [
                     {"title": "Speckled Matte Cream", "sku": "HOME-COF-03-CRM", "price": 54.00, "stock_quantity": 60, "attributes": {"finish": "Speckled Cream"}},
                 ],
@@ -948,7 +948,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 145.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1584990347449-359f1396a8e5?w=800",
+                "image_url": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
                 "variants": [
                     {"title": "Nordic Slate Blue", "sku": "HOME-DUT-04-BLU", "price": 145.00, "stock_quantity": 40, "attributes": {"color": "Slate Blue"}},
                 ],
@@ -960,7 +960,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 48.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800",
+                "image_url": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800",
                 "variants": [
                     {"title": "Terracotta Clay", "sku": "HOME-DIF-05-TER", "price": 48.00, "stock_quantity": 70, "attributes": {"color": "Terracotta"}},
                     {"title": "Chalk White", "sku": "HOME-DIF-05-WHT", "price": 48.00, "stock_quantity": 80, "attributes": {"color": "Chalk White"}},
@@ -973,7 +973,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 189.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800",
+                "image_url": "https://images.unsplash.com/photo-1579656381226-5fc0f0100c3b?w=800",
                 "variants": [
                     {"title": "Queen / Natural Sand", "sku": "HOME-LIN-06-Q-SND", "price": 189.00, "stock_quantity": 30, "attributes": {"size": "Queen", "color": "Sand"}},
                     {"title": "King / Olive Grove", "sku": "HOME-LIN-06-K-OLV", "price": 219.00, "stock_quantity": 25, "attributes": {"size": "King", "color": "Olive"}},
@@ -986,7 +986,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 159.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800",
+                "image_url": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800",
                 "variants": [
                     {"title": "Matte White / Beech Legs", "sku": "HOME-AIR-07-WHT", "price": 159.00, "stock_quantity": 40, "attributes": {"color": "White"}},
                 ],
@@ -998,7 +998,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 320.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=800",
+                "image_url": "https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?w=800",
                 "variants": [
                     {"title": "American Walnut Finish", "sku": "HOME-COF-08-WAL", "price": 320.00, "stock_quantity": 20, "attributes": {"wood": "Walnut"}},
                 ],
@@ -1010,7 +1010,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 280.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800",
+                "image_url": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800",
                 "variants": [
                     {"title": "Natural Ivory & Slate / 5x8 ft", "sku": "HOME-RUG-09-5X8", "price": 280.00, "stock_quantity": 25, "attributes": {"size": "5x8 ft"}},
                 ],
@@ -1022,7 +1022,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 110.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1593618998160-e34014e67546?w=800",
+                "image_url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
                 "variants": [
                     {"title": "7-Inch Santoku with Saya Sheath", "sku": "HOME-KNF-10-7IN", "price": 110.00, "stock_quantity": 45, "attributes": {"length": "7-inch"}},
                 ],
@@ -1034,7 +1034,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 89.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=800",
+                "image_url": "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=800",
                 "variants": [
                     {"title": "Matte Black with Walnut Handle", "sku": "HOME-KTL-11-BLK", "price": 89.00, "stock_quantity": 55, "attributes": {"color": "Matte Black"}},
                 ],
@@ -1046,7 +1046,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 68.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1594040226829-7f251ab46d80?w=800",
+                "image_url": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800",
                 "variants": [
                     {"title": "24-Inch Set of 3 / Walnut", "sku": "HOME-SHL-12-WAL", "price": 68.00, "stock_quantity": 60, "attributes": {"size": "24-inch", "finish": "Walnut"}},
                 ],
@@ -1058,7 +1058,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 58.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800",
+                "image_url": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=800",
                 "variants": [
                     {"title": "Hobu Hobnail Black", "sku": "HOME-TEA-13-BLK", "price": 58.00, "stock_quantity": 40, "attributes": {"color": "Black"}},
                 ],
@@ -1070,7 +1070,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 140.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800",
+                "image_url": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800",
                 "variants": [
                     {"title": "Desert Dune Glaze", "sku": "HOME-PLT-14-DNE", "price": 140.00, "stock_quantity": 30, "attributes": {"color": "Desert Dune"}},
                 ],
@@ -1082,7 +1082,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 75.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1616627547584-bf28cee262db?w=800",
+                "image_url": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800",
                 "variants": [
                     {"title": "Mineral Grey (4-Pack)", "sku": "HOME-TWL-15-GRY", "price": 75.00, "stock_quantity": 65, "attributes": {"color": "Mineral Grey"}},
                 ],
@@ -1094,7 +1094,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 49.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1593618998160-e34014e67546?w=800",
+                "image_url": "https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800",
                 "variants": [
                     {"title": "Natural Acacia Wood", "sku": "HOME-BLK-16-ACA", "price": 49.00, "stock_quantity": 70, "attributes": {"material": "Acacia"}},
                 ],
@@ -1106,7 +1106,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 52.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800",
+                "image_url": "https://images.unsplash.com/photo-1615873968403-89e068629265?w=800",
                 "variants": [
                     {"title": "1.5L Wide-Base Crystal", "sku": "HOME-DEC-17-15L", "price": 52.00, "stock_quantity": 45, "attributes": {"capacity": "1.5L"}},
                 ],
@@ -1118,7 +1118,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 34.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=800",
+                "image_url": "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=800",
                 "variants": [
                     {"title": "Natural Beech / 10-Inch", "sku": "HOME-PLN-18-BCH", "price": 34.00, "stock_quantity": 85, "attributes": {"size": "10-inch"}},
                 ],
@@ -1130,7 +1130,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 46.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=800",
+                "image_url": "https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?w=800",
                 "variants": [
                     {"title": "Standard Contour (White)", "sku": "HOME-PLW-19-STD", "price": 46.00, "stock_quantity": 90, "attributes": {"type": "Contour"}},
                 ],
@@ -1142,7 +1142,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 38.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=800",
+                "image_url": "https://images.unsplash.com/photo-1544457070-4cd773b4d71e?w=800",
                 "variants": [
                     {"title": "Nordic Forest Trio / 8oz Each", "sku": "HOME-CND-20-3PK", "price": 38.00, "stock_quantity": 95, "attributes": {"set": "3-Pack"}},
                 ],
@@ -1154,7 +1154,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 36.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1584990347449-359f1396a8e5?w=800",
+                "image_url": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=800",
                 "variants": [
                     {"title": "Satin Brushed Brass", "sku": "HOME-HLD-21-BRS", "price": 36.00, "stock_quantity": 80, "attributes": {"finish": "Brushed Brass"}},
                 ],
@@ -1166,7 +1166,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 62.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=800",
+                "image_url": "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800",
                 "variants": [
                     {"title": "Matte Slate / USB-C Fast Charge", "sku": "HOME-VAC-22-SLT", "price": 62.00, "stock_quantity": 50, "attributes": {"color": "Slate"}},
                 ],
@@ -1178,7 +1178,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 48.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1590736969955-71cc94801759?w=800",
+                "image_url": "https://images.unsplash.com/photo-1592078615290-033ee584e267?w=800",
                 "variants": [
                     {"title": "12-Inch Bowl + Salad Tongs", "sku": "HOME-BWL-23-12IN", "price": 48.00, "stock_quantity": 60, "attributes": {"size": "12-inch"}},
                 ],
@@ -1190,7 +1190,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 185.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800",
+                "image_url": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800",
                 "variants": [
                     {"title": "Brushed Brass / Oatmeal Shade", "sku": "HOME-LMP-24-BRS", "price": 185.00, "stock_quantity": 25, "attributes": {"finish": "Brass"}},
                 ],
@@ -1202,7 +1202,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 39.99,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
+                "image_url": "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800",
                 "variants": [
                     {"title": "Nordic Slate / 12 Tiles", "sku": "HOME-PNL-25-12PK", "price": 39.99, "stock_quantity": 75, "attributes": {"color": "Slate"}},
                 ],
@@ -1214,7 +1214,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 42.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800",
+                "image_url": "https://images.unsplash.com/photo-1577140917170-285929fb55b7?w=800",
                 "variants": [
                     {"title": "Matte Obsidian / 34oz", "sku": "HOME-PRS-26-34OZ", "price": 42.00, "stock_quantity": 65, "attributes": {"capacity": "34oz"}},
                 ],
@@ -1226,7 +1226,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 26.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1594040226829-7f251ab46d80?w=800",
+                "image_url": "https://images.unsplash.com/photo-1584589167171-541ce45f1eea?w=800",
                 "variants": [
                     {"title": "Large (14x13\")", "sku": "HOME-BSK-27-LRG", "price": 26.00, "stock_quantity": 90, "attributes": {"size": "Large"}},
                 ],
@@ -1238,7 +1238,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 32.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1580481077195-731da99f7999?w=800",
+                "image_url": "https://images.unsplash.com/photo-1586105251261-72a756497a11?w=800",
                 "variants": [
                     {"title": "Black Velour", "sku": "HOME-FOT-28-BLK", "price": 32.00, "stock_quantity": 80, "attributes": {"color": "Black"}},
                 ],
@@ -1250,7 +1250,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 28.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?w=800",
+                "image_url": "https://images.unsplash.com/photo-1532323544230-7191fd51bc1b?w=800",
                 "variants": [
                     {"title": "Chalk Matte White", "sku": "HOME-VAS-29-WHT", "price": 28.00, "stock_quantity": 85, "attributes": {"color": "Chalk White"}},
                 ],
@@ -1262,7 +1262,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 39.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1584990347449-359f1396a8e5?w=800",
+                "image_url": "https://images.unsplash.com/photo-1567016432779-094069958ea5?w=800",
                 "variants": [
                     {"title": "Matte Black", "sku": "HOME-BRD-30-BLK", "price": 39.00, "stock_quantity": 50, "attributes": {"color": "Black"}},
                 ],
@@ -1274,7 +1274,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 58.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=800",
+                "image_url": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=800",
                 "variants": [
                     {"title": "Oatmeal Melange", "sku": "HOME-THR-31-OAT", "price": 58.00, "stock_quantity": 60, "attributes": {"color": "Oatmeal"}},
                 ],
@@ -1286,7 +1286,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 29.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=800",
+                "image_url": "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=800",
                 "variants": [
                     {"title": "White Probe", "sku": "HOME-SNS-32-WHT", "price": 29.00, "stock_quantity": 90, "attributes": {"color": "White"}},
                 ],
@@ -1298,7 +1298,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 45.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1594040226829-7f251ab46d80?w=800",
+                "image_url": "https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?w=800",
                 "variants": [
                     {"title": "Natural Beech / 3-Tier", "sku": "HOME-RCK-33-BCH", "price": 45.00, "stock_quantity": 40, "attributes": {"material": "Beech"}},
                 ],
@@ -1310,7 +1310,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 24.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1584990347449-359f1396a8e5?w=800",
+                "image_url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
                 "variants": [
                     {"title": "16oz Amber Glass Pair", "sku": "HOME-DSP-34-AMB", "price": 24.00, "stock_quantity": 110, "attributes": {"capacity": "16oz Pair"}},
                 ],
@@ -1322,7 +1322,7 @@ CATEGORIES = [
                 "brand": "Nordic Living",
                 "base_price": 38.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800",
+                "image_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800",
                 "variants": [
                     {"title": "Solid Black Walnut", "sku": "HOME-ENT-35-WAL", "price": 38.00, "stock_quantity": 70, "attributes": {"wood": "Walnut"}},
                 ],
@@ -1348,7 +1348,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 48.00,
                 "is_featured": True,
-                "image_url": "https://images.unsplash.com/photo-1608248597359-59800e84b7a1?w=800",
+                "image_url": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800",
                 "variants": [
                     {"title": "50ml Airless Pump", "sku": "BEAU-CRM-01-50ML", "price": 48.00, "stock_quantity": 90, "attributes": {"size": "50ml"}},
                 ],
@@ -1384,7 +1384,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 26.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800",
+                "image_url": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800",
                 "variants": [
                     {"title": "150ml Bottle", "sku": "BEAU-CLN-04-150ML", "price": 26.00, "stock_quantity": 85, "attributes": {"size": "150ml"}},
                 ],
@@ -1396,7 +1396,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 32.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1608248597359-59800e84b7a1?w=800",
+                "image_url": "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=800",
                 "variants": [
                     {"title": "60ml Glass Dropper", "sku": "BEAU-SCP-05-60ML", "price": 32.00, "stock_quantity": 75, "attributes": {"size": "60ml"}},
                 ],
@@ -1408,7 +1408,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 24.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800",
+                "image_url": "https://images.unsplash.com/photo-1556228852-80b6e5eeff06?w=800",
                 "variants": [
                     {"title": "100ml Spray Bottle", "sku": "BEAU-MST-06-100ML", "price": 24.00, "stock_quantity": 90, "attributes": {"size": "100ml"}},
                 ],
@@ -1420,7 +1420,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 52.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1608248597359-59800e84b7a1?w=800",
+                "image_url": "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=800",
                 "variants": [
                     {"title": "30ml Dropper", "sku": "BEAU-BAK-07-30ML", "price": 52.00, "stock_quantity": 60, "attributes": {"size": "30ml"}},
                 ],
@@ -1432,7 +1432,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 69.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=800",
+                "image_url": "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=800",
                 "variants": [
                     {"title": "Champagne Pearl / Standard Pillow", "sku": "BEAU-SLK-08-CHM", "price": 69.00, "stock_quantity": 40, "attributes": {"color": "Champagne"}},
                 ],
@@ -1444,7 +1444,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 36.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800",
+                "image_url": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800",
                 "variants": [
                     {"title": "50ml Matte Tube", "sku": "BEAU-SPF-09-50ML", "price": 36.00, "stock_quantity": 95, "attributes": {"size": "50ml"}},
                 ],
@@ -1456,7 +1456,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 22.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1608248597359-59800e84b7a1?w=800",
+                "image_url": "https://images.unsplash.com/photo-1556228722-d0b5d0c4ab6c?w=800",
                 "variants": [
                     {"title": "Heart Shape Rose Quartz", "sku": "BEAU-GUA-10-QRTZ", "price": 22.00, "stock_quantity": 110, "attributes": {"stone": "Rose Quartz"}},
                 ],
@@ -1468,7 +1468,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 22.50,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800",
+                "image_url": "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=800",
                 "variants": [
                     {"title": "30ml Dropper Bottle", "sku": "BEAU-NIA-11-30ML", "price": 22.50, "stock_quantity": 120, "attributes": {"size": "30ml"}},
                 ],
@@ -1480,7 +1480,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 30.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800",
+                "image_url": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800",
                 "variants": [
                     {"title": "250g Glass Jar", "sku": "BEAU-SCR-12-250G", "price": 30.00, "stock_quantity": 70, "attributes": {"size": "250g"}},
                 ],
@@ -1492,7 +1492,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 18.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1608248597359-59800e84b7a1?w=800",
+                "image_url": "https://images.unsplash.com/photo-1563178406-4cdc2923acbc?w=800",
                 "variants": [
                     {"title": "15g Pot / Vanilla Bean", "sku": "BEAU-LIP-13-VAN", "price": 18.00, "stock_quantity": 130, "attributes": {"flavor": "Vanilla"}},
                 ],
@@ -1504,7 +1504,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 38.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800",
+                "image_url": "https://images.unsplash.com/photo-1584949591568-334335c02cb4?w=800",
                 "variants": [
                     {"title": "60g Powder Bottle", "sku": "BEAU-ENZ-14-60G", "price": 38.00, "stock_quantity": 65, "attributes": {"size": "60g"}},
                 ],
@@ -1516,7 +1516,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 34.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800",
+                "image_url": "https://images.unsplash.com/photo-1512290900672-1f02e6005c21?w=800",
                 "variants": [
                     {"title": "15ml Metal Tip Tube", "sku": "BEAU-EYE-15-15ML", "price": 34.00, "stock_quantity": 85, "attributes": {"size": "15ml"}},
                 ],
@@ -1528,7 +1528,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 32.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1608248597359-59800e84b7a1?w=800",
+                "image_url": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800",
                 "variants": [
                     {"title": "200ml Amber Tub", "sku": "BEAU-MAG-16-200ML", "price": 32.00, "stock_quantity": 80, "attributes": {"size": "200ml"}},
                 ],
@@ -1540,7 +1540,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 25.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800",
+                "image_url": "https://images.unsplash.com/photo-1556228724-4da94e13554e?w=800",
                 "variants": [
                     {"title": "100g Clay Jar", "sku": "BEAU-CLY-17-100G", "price": 25.00, "stock_quantity": 90, "attributes": {"size": "100g"}},
                 ],
@@ -1552,7 +1552,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 19.50,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1608248597359-59800e84b7a1?w=800",
+                "image_url": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800",
                 "variants": [
                     {"title": "100ml Glass Bottle", "sku": "BEAU-JOB-18-100ML", "price": 19.50, "stock_quantity": 110, "attributes": {"size": "100ml"}},
                 ],
@@ -1564,7 +1564,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 22.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=800",
+                "image_url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800",
                 "variants": [
                     {"title": "6-Tablet Box", "sku": "BEAU-STM-19-6PK", "price": 22.00, "stock_quantity": 95, "attributes": {"pack": "6-Pack"}},
                 ],
@@ -1576,7 +1576,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 29.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800",
+                "image_url": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=800",
                 "variants": [
                     {"title": "150ml Frosted Glass", "sku": "BEAU-TNR-20-150ML", "price": 29.00, "stock_quantity": 70, "attributes": {"size": "150ml"}},
                 ],
@@ -1588,7 +1588,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 16.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800",
+                "image_url": "https://images.unsplash.com/photo-1519735777090-ec97162dc266?w=800",
                 "variants": [
                     {"title": "75ml Metal Tin", "sku": "BEAU-SLV-21-75ML", "price": 16.00, "stock_quantity": 120, "attributes": {"size": "75ml"}},
                 ],
@@ -1600,7 +1600,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 149.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800",
+                "image_url": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800",
                 "variants": [
                     {"title": "Pearl White Device + Hydrating Primer Gel", "sku": "BEAU-MIC-22-WHT", "price": 149.00, "stock_quantity": 35, "attributes": {"color": "Pearl White"}},
                 ],
@@ -1612,7 +1612,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 28.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1608248597359-59800e84b7a1?w=800",
+                "image_url": "https://images.unsplash.com/photo-1576426863848-c21f53c60b19?w=800",
                 "variants": [
                     {"title": "5-Sheet Box", "sku": "BEAU-MSK-23-5PK", "price": 28.00, "stock_quantity": 80, "attributes": {"pack": "5-Pack"}},
                 ],
@@ -1624,7 +1624,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 32.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800",
+                "image_url": "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=800",
                 "variants": [
                     {"title": "100ml Balm Tub", "sku": "BEAU-BLM-24-100ML", "price": 32.00, "stock_quantity": 75, "attributes": {"size": "100ml"}},
                 ],
@@ -1636,7 +1636,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 24.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=800",
+                "image_url": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=800",
                 "variants": [
                     {"title": "500g Glass Jar", "sku": "BEAU-SLT-25-500G", "price": 24.00, "stock_quantity": 65, "attributes": {"size": "500g"}},
                 ],
@@ -1648,7 +1648,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 12.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800",
+                "image_url": "https://images.unsplash.com/photo-1584990347449-359f1396a8e5?w=800",
                 "variants": [
                     {"title": "Glass Jar + 2x 30m Spools", "sku": "BEAU-FLS-26-GLS", "price": 12.00, "stock_quantity": 150, "attributes": {"type": "Refillable"}},
                 ],
@@ -1660,7 +1660,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 26.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800",
+                "image_url": "https://images.unsplash.com/photo-1573575154488-fec328d8b0eb?w=800",
                 "variants": [
                     {"title": "50ml Dropper", "sku": "BEAU-SQL-27-50ML", "price": 26.00, "stock_quantity": 85, "attributes": {"size": "50ml"}},
                 ],
@@ -1672,7 +1672,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 34.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1608248597359-59800e84b7a1?w=800",
+                "image_url": "https://images.unsplash.com/photo-1556228725-bf494c92c57a?w=800",
                 "variants": [
                     {"title": "200ml Scrub Jar", "sku": "BEAU-SCP-28-200ML", "price": 34.00, "stock_quantity": 60, "attributes": {"size": "200ml"}},
                 ],
@@ -1684,7 +1684,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 18.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800",
+                "image_url": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800",
                 "variants": [
                     {"title": "Large Oval Paddle", "sku": "BEAU-BRS-29-BAM", "price": 18.00, "stock_quantity": 110, "attributes": {"type": "Paddle"}},
                 ],
@@ -1696,7 +1696,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 44.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800",
+                "image_url": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800",
                 "variants": [
                     {"title": "30ml Dropper", "sku": "BEAU-BLU-30-30ML", "price": 44.00, "stock_quantity": 65, "attributes": {"size": "30ml"}},
                 ],
@@ -1708,7 +1708,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 22.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1608248597359-59800e84b7a1?w=800",
+                "image_url": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=800",
                 "variants": [
                     {"title": "Sheer Berry / 8ml", "sku": "BEAU-OIL-31-BRY", "price": 22.00, "stock_quantity": 120, "attributes": {"shade": "Sheer Berry"}},
                 ],
@@ -1720,7 +1720,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 15.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800",
+                "image_url": "https://images.unsplash.com/photo-1617897903246-719242758050?w=800",
                 "variants": [
                     {"title": "75g Twist Stick", "sku": "BEAU-DEO-32-75G", "price": 15.00, "stock_quantity": 130, "attributes": {"scent": "Cedarwood & Sage"}},
                 ],
@@ -1732,7 +1732,7 @@ CATEGORIES = [
                 "brand": "Botanica Clean",
                 "base_price": 26.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1608248597359-59800e84b7a1?w=800",
+                "image_url": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800",
                 "variants": [
                     {"title": "75ml Tube", "sku": "BEAU-HND-33-75ML", "price": 26.00, "stock_quantity": 80, "attributes": {"size": "75ml"}},
                 ],
@@ -1744,7 +1744,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 20.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=800",
+                "image_url": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800",
                 "variants": [
                     {"title": "100ml Glass Spray", "sku": "BEAU-SLP-34-100ML", "price": 20.00, "stock_quantity": 100, "attributes": {"size": "100ml"}},
                 ],
@@ -1756,7 +1756,7 @@ CATEGORIES = [
                 "brand": "EcoGoods",
                 "base_price": 28.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1608248597359-59800e84b7a1?w=800",
+                "image_url": "https://images.unsplash.com/photo-1556228721-3da2880b95c6?w=800",
                 "variants": [
                     {"title": "15g Slide Tin", "sku": "BEAU-COL-35-15G", "price": 28.00, "stock_quantity": 85, "attributes": {"scent": "Sandalwood Amber"}},
                 ],
@@ -1808,7 +1808,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 549.00,
                 "is_featured": True,
-                "image_url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800",
+                "image_url": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=800",
                 "variants": [
                     {"title": "DLC Titanium Black 47mm", "sku": "SPRT-WAT-03-47", "price": 549.00, "stock_quantity": 25, "attributes": {"size": "47mm"}},
                 ],
@@ -1820,7 +1820,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 38.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=800",
+                "image_url": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800",
                 "variants": [
                     {"title": "Matte Desert Sand", "sku": "SPRT-BOT-04-SND", "price": 38.00, "stock_quantity": 90, "attributes": {"color": "Desert Sand"}},
                     {"title": "Pacific Blue", "sku": "SPRT-BOT-04-BLU", "price": 38.00, "stock_quantity": 80, "attributes": {"color": "Pacific Blue"}},
@@ -1833,7 +1833,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 34.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800",
+                "image_url": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800",
                 "variants": [
                     {"title": "5-Band Complete Kit (10-150 lbs)", "sku": "SPRT-BND-05-5PK", "price": 34.00, "stock_quantity": 100, "attributes": {"set": "5-Pack"}},
                 ],
@@ -1845,7 +1845,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 260.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800",
+                "image_url": "https://images.unsplash.com/photo-1598971861713-54ad16a7e72e?w=800",
                 "variants": [
                     {"title": "Granite Grey / Medium Torso", "sku": "SPRT-RCK-06-GRY", "price": 260.00, "stock_quantity": 25, "attributes": {"size": "Medium"}},
                 ],
@@ -1857,7 +1857,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 169.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800",
+                "image_url": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=800",
                 "variants": [
                     {"title": "Stealth Black / Travel Case Included", "sku": "SPRT-GUN-07-BLK", "price": 169.00, "stock_quantity": 40, "attributes": {"color": "Black"}},
                 ],
@@ -1869,7 +1869,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 39.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800",
+                "image_url": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800",
                 "variants": [
                     {"title": "Steel Cable / Matte Black", "sku": "SPRT-ROP-08-BLK", "price": 39.00, "stock_quantity": 85, "attributes": {"color": "Black"}},
                 ],
@@ -1881,7 +1881,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 349.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800",
+                "image_url": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=800",
                 "variants": [
                     {"title": "Pair (52.5 lbs each) with Trays", "sku": "SPRT-DMB-09-PAIR", "price": 349.00, "stock_quantity": 20, "attributes": {"weight": "52.5 lbs Pair"}},
                 ],
@@ -1893,7 +1893,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 49.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800",
+                "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800",
                 "variants": [
                     {"title": "Titanium Ultralight", "sku": "SPRT-STV-10-TI", "price": 49.00, "stock_quantity": 70, "attributes": {"material": "Titanium"}},
                 ],
@@ -1905,7 +1905,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 89.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=800",
+                "image_url": "https://images.unsplash.com/photo-1616627547584-bf28cee262db?w=800",
                 "variants": [
                     {"title": "Red Mirror / Carbon Frame", "sku": "SPRT-GLS-11-RED", "price": 89.00, "stock_quantity": 55, "attributes": {"lens": "Red Mirror"}},
                 ],
@@ -1917,7 +1917,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 28.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800",
+                "image_url": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800",
                 "variants": [
                     {"title": "13-Inch Compact / Black", "sku": "SPRT-ROL-12-BLK", "price": 28.00, "stock_quantity": 90, "attributes": {"size": "13-inch"}},
                 ],
@@ -1929,7 +1929,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 79.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800",
+                "image_url": "https://images.unsplash.com/photo-1578768079052-aa76e520028b?w=800",
                 "variants": [
                     {"title": "120-140cm Adjustable Pair", "sku": "SPRT-POL-13-140", "price": 79.00, "stock_quantity": 45, "attributes": {"length": "120-140cm"}},
                 ],
@@ -1941,7 +1941,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 22.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1616627547584-bf28cee262db?w=800",
+                "image_url": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=800",
                 "variants": [
                     {"title": "Large (30x60\") with Mesh Pouch", "sku": "SPRT-TWL-14-LRG", "price": 22.00, "stock_quantity": 110, "attributes": {"size": "Large"}},
                 ],
@@ -1953,7 +1953,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 299.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800",
+                "image_url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800",
                 "variants": [
                     {"title": "Matte Stealth Black / Size 10", "sku": "SPRT-RNG-15-SZ10", "price": 299.00, "stock_quantity": 30, "attributes": {"size": "10", "color": "Black"}},
                 ],
@@ -1965,7 +1965,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 36.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800",
+                "image_url": "https://images.unsplash.com/photo-1508873696983-2df5293cb32b?w=800",
                 "variants": [
                     {"title": "High-Vis Yellow / 20L", "sku": "SPRT-DRY-16-YEL", "price": 36.00, "stock_quantity": 65, "attributes": {"capacity": "20L"}},
                 ],
@@ -1977,7 +1977,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 85.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800",
+                "image_url": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800",
                 "variants": [
                     {"title": "Natural Maple Surf Shape", "sku": "SPRT-BAL-17-MPL", "price": 85.00, "stock_quantity": 40, "attributes": {"style": "Surf"}},
                 ],
@@ -1989,7 +1989,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 95.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1544441893-675973e31985?w=800",
+                "image_url": "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?w=800",
                 "variants": [
                     {"title": "Black / Size M/L", "sku": "SPRT-VST-18-ML", "price": 95.00, "stock_quantity": 45, "attributes": {"size": "M/L"}},
                 ],
@@ -2001,7 +2001,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 18.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=800",
+                "image_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
                 "variants": [
                     {"title": "Smoke Black / 24oz", "sku": "SPRT-CYC-19-24OZ", "price": 18.00, "stock_quantity": 100, "attributes": {"capacity": "24oz"}},
                 ],
@@ -2013,7 +2013,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 46.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800",
+                "image_url": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800",
                 "variants": [
                     {"title": "Heavy-Duty Steel / Black", "sku": "SPRT-BAR-20-BLK", "price": 46.00, "stock_quantity": 60, "attributes": {"color": "Black"}},
                 ],
@@ -2025,7 +2025,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 289.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1508873696983-2df5293cb32b?w=800",
+                "image_url": "https://images.unsplash.com/photo-1516541196182-6bdb0516ed27?w=800",
                 "variants": [
                     {"title": "Alpine Yellow 2-Person", "sku": "SPRT-TNT-21-YEL", "price": 289.00, "stock_quantity": 20, "attributes": {"capacity": "2-Person"}},
                 ],
@@ -2037,7 +2037,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 89.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800",
+                "image_url": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800",
                 "variants": [
                     {"title": "24 kg (53 lbs) / Green Band", "sku": "SPRT-KTB-22-24KG", "price": 89.00, "stock_quantity": 30, "attributes": {"weight": "24kg"}},
                 ],
@@ -2049,7 +2049,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 44.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800",
+                "image_url": "https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800",
                 "variants": [
                     {"title": "Reflective Band / 1000lm", "sku": "SPRT-HD-23-1000", "price": 44.00, "stock_quantity": 85, "attributes": {"lumens": "1000lm"}},
                 ],
@@ -2061,7 +2061,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 389.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1508873696983-2df5293cb32b?w=800",
+                "image_url": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800",
                 "variants": [
                     {"title": "Ocean Teal Complete Set", "sku": "SPRT-SUP-24-TEA", "price": 389.00, "stock_quantity": 18, "attributes": {"length": "10'6\""}},
                 ],
@@ -2073,7 +2073,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 19.99,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800",
+                "image_url": "https://images.unsplash.com/photo-1486218119243-13883505764c?w=800",
                 "variants": [
                     {"title": "Stealth Black (Pair)", "sku": "SPRT-WRP-25-BLK", "price": 19.99, "stock_quantity": 120, "attributes": {"color": "Black"}},
                 ],
@@ -2085,7 +2085,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 28.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800",
+                "image_url": "https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=800",
                 "variants": [
                     {"title": "Frosted Warm White", "sku": "SPRT-LNT-26-WHT", "price": 28.00, "stock_quantity": 90, "attributes": {"color": "Warm White"}},
                 ],
@@ -2097,7 +2097,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 14.99,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800",
+                "image_url": "https://images.unsplash.com/photo-1563811771046-ba984ff30900?w=800",
                 "variants": [
                     {"title": "Matte Black Dial", "sku": "SPRT-GRP-27-BLK", "price": 14.99, "stock_quantity": 140, "attributes": {"color": "Black"}},
                 ],
@@ -2109,7 +2109,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 129.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800",
+                "image_url": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800",
                 "variants": [
                     {"title": "300L Solo Pod / Charcoal", "sku": "SPRT-ICE-28-300L", "price": 129.00, "stock_quantity": 30, "attributes": {"capacity": "300L"}},
                 ],
@@ -2121,7 +2121,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 16.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1544441893-675973e31985?w=800",
+                "image_url": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800",
                 "variants": [
                     {"title": "Black One-Size", "sku": "SPRT-CAP-29-BLK", "price": 16.00, "stock_quantity": 130, "attributes": {"color": "Black"}},
                 ],
@@ -2133,7 +2133,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 17.50,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800",
+                "image_url": "https://images.unsplash.com/photo-1517344884509-a0c97ec11bcc?w=800",
                 "variants": [
                     {"title": "Reflective Stealth Black", "sku": "SPRT-ARM-30-BLK", "price": 17.50, "stock_quantity": 110, "attributes": {"color": "Black"}},
                 ],
@@ -2145,7 +2145,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 32.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800",
+                "image_url": "https://images.unsplash.com/photo-1579758629938-03607ccdbaba?w=800",
                 "variants": [
                     {"title": "Complete 20ft Speed Kit", "sku": "SPRT-LAD-31-KIT", "price": 32.00, "stock_quantity": 75, "attributes": {"kit": "20ft Kit"}},
                 ],
@@ -2157,7 +2157,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 48.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800",
+                "image_url": "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800",
                 "variants": [
                     {"title": "Midnight Black / Medium", "sku": "SPRT-BRA-32-BLK-M", "price": 48.00, "stock_quantity": 50, "attributes": {"size": "M", "color": "Black"}},
                 ],
@@ -2169,7 +2169,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 15.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800",
+                "image_url": "https://images.unsplash.com/photo-1594882645126-14020914d58d?w=800",
                 "variants": [
                     {"title": "Navy Blue / 8ft", "sku": "SPRT-STP-33-NAV", "price": 15.00, "stock_quantity": 120, "attributes": {"length": "8ft"}},
                 ],
@@ -2181,7 +2181,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 34.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800",
+                "image_url": "https://images.unsplash.com/photo-1518611012118-696072aa579b?w=800",
                 "variants": [
                     {"title": "Neon Lime / Adjustable Fit", "sku": "SPRT-VST-34-LME", "price": 34.00, "stock_quantity": 80, "attributes": {"color": "Neon Lime"}},
                 ],
@@ -2193,7 +2193,7 @@ CATEGORIES = [
                 "brand": "Apex Sport",
                 "base_price": 45.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800",
+                "image_url": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800",
                 "variants": [
                     {"title": "MOLLE Tactical Red Pouch", "sku": "SPRT-MED-35-RED", "price": 45.00, "stock_quantity": 70, "attributes": {"color": "Red"}},
                 ],
@@ -2256,7 +2256,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 34.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800",
+                "image_url": "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?w=800",
                 "variants": [
                     {"title": "1L UV-Protected Tin", "sku": "GOUR-OIL-04-1L", "price": 34.00, "stock_quantity": 90, "attributes": {"volume": "1L"}},
                 ],
@@ -2292,7 +2292,7 @@ CATEGORIES = [
                 "brand": "OriginRoast",
                 "base_price": 36.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800",
+                "image_url": "https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=800",
                 "variants": [
                     {"title": "100g Foil Pouch in Tin", "sku": "GOUR-TEA-07-100G", "price": 36.00, "stock_quantity": 55, "attributes": {"weight": "100g"}},
                 ],
@@ -2316,7 +2316,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 39.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1514944298352-b5e1b002235c?w=800",
+                "image_url": "https://images.unsplash.com/photo-1509358271058-acd22cc93898?w=800",
                 "variants": [
                     {"title": "10-Pod Glass Tube", "sku": "GOUR-VAN-09-10PK", "price": 39.00, "stock_quantity": 60, "attributes": {"count": "10 Pods"}},
                 ],
@@ -2328,7 +2328,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 42.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1514944298352-b5e1b002235c?w=800",
+                "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800",
                 "variants": [
                     {"title": "5g Metal Tin", "sku": "GOUR-SAF-10-5G", "price": 42.00, "stock_quantity": 50, "attributes": {"weight": "5g"}},
                 ],
@@ -2340,7 +2340,7 @@ CATEGORIES = [
                 "brand": "OriginRoast",
                 "base_price": 16.50,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800",
+                "image_url": "https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=800",
                 "variants": [
                     {"title": "350g Squeeze Bottle", "sku": "GOUR-HNY-11-350G", "price": 16.50, "stock_quantity": 110, "attributes": {"size": "350g"}},
                 ],
@@ -2352,7 +2352,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 35.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800",
+                "image_url": "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=800",
                 "variants": [
                     {"title": "Complete Sourdough Baker Kit", "sku": "GOUR-BRD-12-KIT", "price": 35.00, "stock_quantity": 70, "attributes": {"set": "Complete Kit"}},
                 ],
@@ -2376,7 +2376,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 22.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1511381939415-e44015466834?w=800",
+                "image_url": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=800",
                 "variants": [
                     {"title": "200g Glass Jar", "sku": "GOUR-PST-14-200G", "price": 22.00, "stock_quantity": 90, "attributes": {"size": "200g"}},
                 ],
@@ -2388,7 +2388,7 @@ CATEGORIES = [
                 "brand": "OriginRoast",
                 "base_price": 24.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800",
+                "image_url": "https://images.unsplash.com/photo-1587049352847-81a56d773cae?w=800",
                 "variants": [
                     {"title": "500g Jar", "sku": "GOUR-HNY-15-500G", "price": 24.00, "stock_quantity": 75, "attributes": {"weight": "500g"}},
                 ],
@@ -2400,7 +2400,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 38.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1551462147-ff29053bfc14?w=800",
+                "image_url": "https://images.unsplash.com/photo-1452195100486-9cc805987862?w=800",
                 "variants": [
                     {"title": "500g Vacuum Wedge", "sku": "GOUR-CHS-16-500G", "price": 38.00, "stock_quantity": 40, "attributes": {"weight": "500g"}},
                 ],
@@ -2412,7 +2412,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 18.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1514944298352-b5e1b002235c?w=800",
+                "image_url": "https://images.unsplash.com/photo-1518057111178-44a106bad636?w=800",
                 "variants": [
                     {"title": "150g Tin", "sku": "GOUR-SLT-17-150G", "price": 18.00, "stock_quantity": 100, "attributes": {"weight": "150g"}},
                 ],
@@ -2436,7 +2436,7 @@ CATEGORIES = [
                 "brand": "OriginRoast",
                 "base_price": 36.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800",
+                "image_url": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800",
                 "variants": [
                     {"title": "Whole Bean / 1kg", "sku": "GOUR-COF-19-1KG", "price": 36.00, "stock_quantity": 70, "attributes": {"weight": "1kg"}},
                 ],
@@ -2448,7 +2448,7 @@ CATEGORIES = [
                 "brand": "OriginRoast",
                 "base_price": 29.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1511381939415-e44015466834?w=800",
+                "image_url": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=800",
                 "variants": [
                     {"title": "500g Pouch", "sku": "GOUR-CAC-20-500G", "price": 29.00, "stock_quantity": 65, "attributes": {"weight": "500g"}},
                 ],
@@ -2460,7 +2460,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 38.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800",
+                "image_url": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800",
                 "variants": [
                     {"title": "250ml Glass Bottle", "sku": "GOUR-TRF-21-250ML", "price": 38.00, "stock_quantity": 50, "attributes": {"volume": "250ml"}},
                 ],
@@ -2472,7 +2472,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 14.50,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1514944298352-b5e1b002235c?w=800",
+                "image_url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800",
                 "variants": [
                     {"title": "300g Mason Jar", "sku": "GOUR-PCK-22-300G", "price": 14.50, "stock_quantity": 90, "attributes": {"size": "300g"}},
                 ],
@@ -2484,7 +2484,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 49.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1514944298352-b5e1b002235c?w=800",
+                "image_url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800",
                 "variants": [
                     {"title": "100g Sealed Pouch", "sku": "GOUR-MRL-23-100G", "price": 49.00, "stock_quantity": 40, "attributes": {"weight": "100g"}},
                 ],
@@ -2496,7 +2496,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 16.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1514944298352-b5e1b002235c?w=800",
+                "image_url": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800",
                 "variants": [
                     {"title": "250g Vintage Tin (Bittersweet)", "sku": "GOUR-PAP-24-250G", "price": 16.00, "stock_quantity": 110, "attributes": {"weight": "250g"}},
                 ],
@@ -2508,7 +2508,7 @@ CATEGORIES = [
                 "brand": "OriginRoast",
                 "base_price": 21.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800",
+                "image_url": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800",
                 "variants": [
                     {"title": "1L Glass Bottle (Makes 10 Cups)", "sku": "GOUR-CHI-25-1L", "price": 21.00, "stock_quantity": 75, "attributes": {"volume": "1L"}},
                 ],
@@ -2520,7 +2520,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 18.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1514944298352-b5e1b002235c?w=800",
+                "image_url": "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=800",
                 "variants": [
                     {"title": "250g Resealable Pouch", "sku": "GOUR-PEP-26-250G", "price": 18.00, "stock_quantity": 120, "attributes": {"weight": "250g"}},
                 ],
@@ -2532,7 +2532,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 12.50,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1514944298352-b5e1b002235c?w=800",
+                "image_url": "https://images.unsplash.com/photo-1534939561126-855b8675edd7?w=800",
                 "variants": [
                     {"title": "200g Jar", "sku": "GOUR-MST-27-200G", "price": 12.50, "stock_quantity": 100, "attributes": {"size": "200g"}},
                 ],
@@ -2544,7 +2544,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 15.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800",
+                "image_url": "https://images.unsplash.com/photo-1568644396922-5c3bfae12521?w=800",
                 "variants": [
                     {"title": "350g Glass Jar", "sku": "GOUR-JAM-28-350G", "price": 15.00, "stock_quantity": 80, "attributes": {"weight": "350g"}},
                 ],
@@ -2556,7 +2556,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 16.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1511381939415-e44015466834?w=800",
+                "image_url": "https://images.unsplash.com/photo-1582293041079-7814c2f12063?w=800",
                 "variants": [
                     {"title": "250g Jar", "sku": "GOUR-CRM-29-250G", "price": 16.00, "stock_quantity": 90, "attributes": {"size": "250g"}},
                 ],
@@ -2568,7 +2568,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 28.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1551462147-ff29053bfc14?w=800",
+                "image_url": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800",
                 "variants": [
                     {"title": "200g Pre-Sliced Tray", "sku": "GOUR-HAM-30-200G", "price": 28.00, "stock_quantity": 40, "attributes": {"weight": "200g"}},
                 ],
@@ -2580,7 +2580,7 @@ CATEGORIES = [
                 "brand": "OriginRoast",
                 "base_price": 22.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800",
+                "image_url": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=800",
                 "variants": [
                     {"title": "100g Sealed Tin", "sku": "GOUR-HOJ-31-100G", "price": 22.00, "stock_quantity": 70, "attributes": {"weight": "100g"}},
                 ],
@@ -2592,7 +2592,7 @@ CATEGORIES = [
                 "brand": "OriginRoast",
                 "base_price": 17.50,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1511381939415-e44015466834?w=800",
+                "image_url": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=800",
                 "variants": [
                     {"title": "300g Jar", "sku": "GOUR-NUT-32-300G", "price": 17.50, "stock_quantity": 90, "attributes": {"size": "300g"}},
                 ],
@@ -2604,7 +2604,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 15.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1514944298352-b5e1b002235c?w=800",
+                "image_url": "https://images.unsplash.com/photo-1518057111178-44a106bad637?w=800",
                 "variants": [
                     {"title": "300g Grinder", "sku": "GOUR-SLT-33-GRD", "price": 15.00, "stock_quantity": 110, "attributes": {"type": "Grinder"}},
                 ],
@@ -2616,7 +2616,7 @@ CATEGORIES = [
                 "brand": "Artigiano",
                 "base_price": 36.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800",
+                "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772fe?w=800",
                 "variants": [
                     {"title": "1kg Gift Box", "sku": "GOUR-PAN-34-1KG", "price": 36.00, "stock_quantity": 35, "attributes": {"weight": "1kg"}},
                 ],
@@ -2628,7 +2628,7 @@ CATEGORIES = [
                 "brand": "OriginRoast",
                 "base_price": 22.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=800",
+                "image_url": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=800",
                 "variants": [
                     {"title": "6x 330ml Glass Bottles", "sku": "GOUR-SDA-35-6PK", "price": 22.00, "stock_quantity": 60, "attributes": {"pack": "6-Pack"}},
                 ],
