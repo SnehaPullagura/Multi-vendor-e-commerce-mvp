@@ -1,12 +1,21 @@
 # Dependencies
 node_modules/
 .venv/
+backend/.env
 backend\.env
-# Builds
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# TypeScript & Next.js Builds
 .next/
 dist/
 build/
 coverage/
+*.tsbuildinfo
 
 # Databases & Runtime
 *.db
@@ -14,3 +23,5 @@ coverage/
 *.log
 *.zip
 .DS_Store
+.vscode/
+.idea/
