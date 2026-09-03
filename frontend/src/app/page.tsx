@@ -31,21 +31,33 @@ export default function HomePage() {
 
   useEffect(() => {
     async function loadData() {
+      setIsLoading(true);
       try {
-        const [catRes, prodRes, vendRes] = await Promise.all([
-          api.get("/categories"),
-          api.get("/products/list?page_size=8"),
-          api.get("/vendors?limit=4"),
-        ]);
+        const prodRes = await api.get("/products/list?page_size=12");
+        if (prodRes.data?.success && prodRes.data?.data?.items) {
+          setFeaturedProducts(prodRes.data.data.items);
+        }
+      } catch (err) {
+        console.error("Failed to load products for home page:", err);
+      }
 
-        if (catRes.data.success) setCategories(catRes.data.data);
-        if (prodRes.data.success) setFeaturedProducts(prodRes.data.data.items);
-        if (vendRes.data.success) {
+      try {
+        const catRes = await api.get("/categories");
+        if (catRes.data?.success && catRes.data?.data) {
+          setCategories(catRes.data.data);
+        }
+      } catch (err) {
+        console.error("Failed to load categories for home page:", err);
+      }
+
+      try {
+        const vendRes = await api.get("/vendors?limit=4");
+        if (vendRes.data?.success && vendRes.data?.data) {
           const vendorData = vendRes.data.data;
           setVendors(Array.isArray(vendorData) ? vendorData : vendorData.items || []);
         }
       } catch (err) {
-        console.error("Failed to load home page content:", err);
+        console.error("Failed to load vendors for home page:", err);
       } finally {
         setIsLoading(false);
       }
@@ -58,9 +70,9 @@ export default function HomePage() {
     async function loadDepartmentProducts() {
       setIsDeptLoading(true);
       try {
-        const res = await api.get(`/products/list?category_id=${activeDepartment}&limit=4`);
-        if (res.data.success) {
-          setDepartmentProducts(res.data.data.items || []);
+        const res = await api.get(`/products/list?category_id=${activeDepartment}&page_size=4`);
+        if (res.data?.success && res.data?.data?.items) {
+          setDepartmentProducts(res.data.data.items);
         }
       } catch (err) {
         console.error("Failed to fetch department products:", err);
