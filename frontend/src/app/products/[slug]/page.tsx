@@ -21,45 +21,6 @@ import { api } from "@/lib/api";
 import { formatCurrency } from "@/lib/utils";
 import { useCartStore } from "@/store/useCartStore";
 
-function getProductImage(product: Product | null): string {
-  if (!product) return "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800";
-  if (product.images && product.images.length > 0 && product.images[0].image_url && product.images[0].image_url.startsWith("http")) {
-    return product.images[0].image_url;
-  }
-  const text = `${product.title || ""} ${product.brand || ""}`.toLowerCase();
-  if (text.includes("headphone") || text.includes("audio") || text.includes("sound") || text.includes("anc") || text.includes("aero")) {
-    return "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80";
-  }
-  if (text.includes("phone") || text.includes("smartphone") || text.includes("titan") || text.includes("5g") || text.includes("nova")) {
-    return "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800&auto=format&fit=crop&q=80";
-  }
-  if (text.includes("hoodie") || text.includes("fleece") || text.includes("cotton") || text.includes("apparel") || text.includes("jacket")) {
-    return "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&auto=format&fit=crop&q=80";
-  }
-  if (text.includes("sneaker") || text.includes("shoe") || text.includes("footwear") || text.includes("leather")) {
-    return "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&auto=format&fit=crop&q=80";
-  }
-  if (text.includes("watch")) {
-    return "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80";
-  }
-  if (text.includes("camera") || text.includes("drone")) {
-    return "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&auto=format&fit=crop&q=80";
-  }
-  if (text.includes("keyboard")) {
-    return "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&auto=format&fit=crop&q=80";
-  }
-  if (text.includes("lamp") || text.includes("light")) {
-    return "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&auto=format&fit=crop&q=80";
-  }
-  if (text.includes("backpack") || text.includes("bag")) {
-    return "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&auto=format&fit=crop&q=80";
-  }
-  if (text.includes("chair") || text.includes("desk") || text.includes("furniture") || text.includes("living") || text.includes("home")) {
-    return "https://images.unsplash.com/photo-1580481077111-9a70f2f354f3?w=800&auto=format&fit=crop&q=80";
-  }
-  return "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80";
-}
-
 export default function ProductDetailPage() {
   const params = useParams();
   const router = useRouter();
@@ -67,7 +28,6 @@ export default function ProductDetailPage() {
 
   const [product, setProduct] = useState<Product | null>(null);
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(null);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [quantity, setQuantity] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
   const [isAdding, setIsAdding] = useState(false);
@@ -84,11 +44,6 @@ export default function ProductDetailPage() {
           setProduct(prod);
           if (prod.variants && prod.variants.length > 0) {
             setSelectedVariant(prod.variants[0]);
-          }
-          if (prod.images && prod.images.length > 0) {
-            setSelectedImage(prod.images[0].image_url);
-          } else {
-            setSelectedImage(getProductImage(prod));
           }
         }
       } catch (err) {
@@ -187,41 +142,14 @@ export default function ProductDetailPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-white rounded-3xl p-6 sm:p-10 border border-gray-100 shadow-sm">
           {/* Left: Product Images */}
           <div className="flex flex-col gap-4">
-            <div className="aspect-square w-full rounded-2xl bg-slate-50 border border-gray-100 flex items-center justify-center relative overflow-hidden">
-              <img
-                src={selectedImage || getProductImage(product)}
-                alt={product.title}
-                className="w-full h-full object-cover"
-              />
+            <div className="aspect-square w-full rounded-2xl bg-slate-50 border border-gray-100 flex items-center justify-center p-8 relative overflow-hidden">
+              <div className="text-8xl select-none">📦</div>
               {product.is_featured && (
-                <span className="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">
+                <span className="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
                   FEATURED PICK
                 </span>
               )}
             </div>
-
-            {/* Gallery Thumbnails */}
-            {product.images && product.images.length > 1 && (
-              <div className="flex items-center gap-3 overflow-x-auto pb-2">
-                {product.images.map((img) => (
-                  <button
-                    key={img.id}
-                    onClick={() => setSelectedImage(img.image_url)}
-                    className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition-all shrink-0 ${
-                      selectedImage === img.image_url
-                        ? "border-indigo-600 ring-2 ring-indigo-600/20 shadow-md"
-                        : "border-gray-200 hover:border-gray-300 opacity-70 hover:opacity-100"
-                    }`}
-                  >
-                    <img
-                      src={img.image_url}
-                      alt={product.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
-            )}
           </div>
 
           {/* Right: Product Details & Variant Picker */}
