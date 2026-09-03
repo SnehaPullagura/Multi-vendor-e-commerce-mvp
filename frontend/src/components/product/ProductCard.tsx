@@ -11,6 +11,38 @@ interface ProductCardProps {
   product: Product;
 }
 
+function getProductImage(product: Product): string {
+  if (product.images && product.images.length > 0 && product.images[0].image_url && product.images[0].image_url.startsWith("http")) {
+    return product.images[0].image_url;
+  }
+  const text = `${product.title || ""} ${product.brand || ""}`.toLowerCase();
+  if (text.includes("headphone") || text.includes("audio") || text.includes("sound") || text.includes("anc") || text.includes("aero")) {
+    return "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80";
+  }
+  if (text.includes("phone") || text.includes("smartphone") || text.includes("titan") || text.includes("5g") || text.includes("nova")) {
+    return "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800&auto=format&fit=crop&q=80";
+  }
+  if (text.includes("hoodie") || text.includes("fleece") || text.includes("cotton") || text.includes("apparel") || text.includes("jacket")) {
+    return "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&auto=format&fit=crop&q=80";
+  }
+  if (text.includes("sneaker") || text.includes("shoe") || text.includes("footwear") || text.includes("leather")) {
+    return "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&auto=format&fit=crop&q=80";
+  }
+  if (text.includes("watch")) {
+    return "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80";
+  }
+  if (text.includes("camera")) {
+    return "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&auto=format&fit=crop&q=80";
+  }
+  if (text.includes("laptop") || text.includes("computer")) {
+    return "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&auto=format&fit=crop&q=80";
+  }
+  if (text.includes("chair") || text.includes("desk") || text.includes("furniture") || text.includes("living") || text.includes("home")) {
+    return "https://images.unsplash.com/photo-1580481077111-9a70f2f354f3?w=800&auto=format&fit=crop&q=80";
+  }
+  return "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80";
+}
+
 export function ProductCard({ product }: ProductCardProps) {
   const { addItem } = useCartStore();
   const [isAdding, setIsAdding] = useState(false);
@@ -18,7 +50,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
   // Pick first variant
   const defaultVariant = product.variants?.[0];
-  const primaryImage = product.images?.[0]?.image_url || "/placeholder.png";
+  const primaryImage = getProductImage(product);
 
   const handleQuickAdd = async (e: React.MouseEvent) => {
     e.preventDefault();
@@ -42,22 +74,24 @@ export function ProductCard({ product }: ProductCardProps) {
       className="group bg-white rounded-2xl border border-gray-100 p-3 flex flex-col hover:shadow-xl hover:border-gray-200 transition-all duration-300 relative overflow-hidden"
     >
       {/* Image Container */}
-      <div className="aspect-square w-full rounded-xl bg-gray-50 relative overflow-hidden flex items-center justify-center p-4">
-        {/* Placeholder image or Real image */}
-        <div className="w-full h-full flex items-center justify-center text-4xl font-black text-gray-200 group-hover:scale-105 transition-transform duration-300">
-          📦
-        </div>
+      <div className="aspect-square w-full rounded-xl bg-gray-50 relative overflow-hidden flex items-center justify-center">
+        <img
+          src={primaryImage}
+          alt={product.title}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          loading="lazy"
+        />
 
         {/* Featured Tag */}
         {product.is_featured && (
-          <span className="absolute top-2 left-2 bg-amber-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm">
+          <span className="absolute top-2 left-2 bg-amber-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm z-10">
             FEATURED
           </span>
         )}
 
         {/* Vendor Badge */}
         {product.vendor && (
-          <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-md px-2 py-1 rounded-lg border border-gray-100 flex items-center gap-1 text-[11px] font-medium text-gray-700 shadow-sm">
+          <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-md px-2 py-1 rounded-lg border border-gray-100 flex items-center gap-1 text-[11px] font-medium text-gray-700 shadow-sm z-10">
             <Store className="w-3 h-3 text-indigo-600" />
             <span className="truncate max-w-[100px]">{product.vendor.store_name}</span>
           </div>

@@ -74,7 +74,10 @@ class ProductRepository(BaseRepository[Product]):
 
         filters = []
         if category_id:
-            filters.append(Product.category_id == category_id)
+            sub_cats_query = select(Category.id).where(Category.parent_id == category_id)
+            sub_cats_res = await self.db.execute(sub_cats_query)
+            cat_ids = [category_id] + list(sub_cats_res.scalars().all())
+            filters.append(Product.category_id.in_(cat_ids))
         if vendor_id:
             filters.append(Product.vendor_id == vendor_id)
         if status:
@@ -82,7 +85,7 @@ class ProductRepository(BaseRepository[Product]):
         if is_featured is not None:
             filters.append(Product.is_featured == is_featured)
         if brand:
-            filters.append(func.lower(Product.brand) == brand.lower().strip())
+            filters.append(Product.brand.ilike(f"%{brand.strip()}%"))
         if min_price is not None:
             filters.append(Product.base_price >= min_price)
         if max_price is not None:
