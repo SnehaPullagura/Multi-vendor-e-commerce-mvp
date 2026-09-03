@@ -413,7 +413,7 @@ CATEGORIES = [
                 "brand": "AeroSound",
                 "base_price": 38.00,
                 "is_featured": False,
-                "image_url": "https://images.unsplash.com/photo-1622445262464-84b1456045b6?w=800",
+                "image_url": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=800",
                 "variants": [
                     {"title": "Cognac Brown", "sku": "ELEC-WLT-33-BRN", "price": 38.00, "stock_quantity": 120, "attributes": {"color": "Cognac"}},
                     {"title": "Midnight Navy", "sku": "ELEC-WLT-33-NAV", "price": 38.00, "stock_quantity": 100, "attributes": {"color": "Navy"}},

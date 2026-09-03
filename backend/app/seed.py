@@ -13,12 +13,20 @@ from app.models.variant import ProductVariant
 from app.models.vendor import Vendor
 
 
+from sqlalchemy import text
+from app.core.config import settings
+
 async def seed_data():
     print("[*] Rebuilding database schema from scratch...")
     from app.core.database import engine, Base
     async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.drop_all)
-        await conn.run_sync(Base.metadata.create_all)
+        if "postgres" in settings.DATABASE_URL:
+            await conn.execute(text("DROP SCHEMA public CASCADE;"))
+            await conn.execute(text("CREATE SCHEMA public;"))
+            await conn.run_sync(Base.metadata.create_all)
+        else:
+            await conn.run_sync(Base.metadata.drop_all)
+            await conn.run_sync(Base.metadata.create_all)
 
     async with AsyncSessionLocal() as db:
         print("[*] Seeding Platform Administrators, Vendors & Customers...")

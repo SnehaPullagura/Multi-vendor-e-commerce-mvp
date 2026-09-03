@@ -12,46 +12,66 @@ interface ProductCardProps {
   product: Product;
 }
 
+function getFallbackImage(product: Product): string {
+  const text = `${product.title || ""} ${product.brand || ""} ${(product as any).category?.name || ""}`.toLowerCase();
+  if (text.includes("wallet") || text.includes("case") || text.includes("magsafe") || text.includes("card")) {
+    return "https://images.unsplash.com/photo-1544816155-12df9643f363?w=800";
+  }
+  if (text.includes("deskmat") || text.includes("mat") || text.includes("pad") || text.includes("felt")) {
+    return "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800";
+  }
+  if (text.includes("webcam") || text.includes("camera") || text.includes("stream") || text.includes("tracking") || text.includes("pulsecam")) {
+    return "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=800";
+  }
+  if (text.includes("projector") || text.includes("beam") || text.includes("monitor") || text.includes("display") || text.includes("spectra")) {
+    return "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800";
+  }
+  if (text.includes("keyboard") || text.includes("keycap") || text.includes("switch")) {
+    return "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800";
+  }
+  if (text.includes("headphone") || text.includes("audio") || text.includes("sound") || text.includes("anc") || text.includes("earphone")) {
+    return "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800";
+  }
+  if (text.includes("phone") || text.includes("smartphone") || text.includes("titan") || text.includes("5g") || text.includes("nova")) {
+    return "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800";
+  }
+  if (text.includes("hoodie") || text.includes("fleece") || text.includes("cotton") || text.includes("apparel") || text.includes("jacket") || text.includes("shirt")) {
+    return "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800";
+  }
+  if (text.includes("sneaker") || text.includes("shoe") || text.includes("footwear") || text.includes("leather") || text.includes("boot")) {
+    return "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800";
+  }
+  if (text.includes("watch") || text.includes("timepiece")) {
+    return "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800";
+  }
+  if (text.includes("lamp") || text.includes("light") || text.includes("chair") || text.includes("desk") || text.includes("furniture")) {
+    return "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800";
+  }
+  if (text.includes("serum") || text.includes("skin") || text.includes("lotion") || text.includes("cream") || text.includes("oil")) {
+    return "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800";
+  }
+  if (text.includes("coffee") || text.includes("espresso") || text.includes("brew") || text.includes("bean") || text.includes("tea")) {
+    return "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800";
+  }
+  return "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800";
+}
+
 function getProductImage(product: Product): string {
   if (product.images && product.images.length > 0 && product.images[0].image_url && product.images[0].image_url.startsWith("http")) {
     return product.images[0].image_url;
   }
-  const text = `${product.title || ""} ${product.brand || ""}`.toLowerCase();
-  if (text.includes("headphone") || text.includes("audio") || text.includes("sound") || text.includes("anc") || text.includes("aero")) {
-    return "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80";
-  }
-  if (text.includes("phone") || text.includes("smartphone") || text.includes("titan") || text.includes("5g") || text.includes("nova")) {
-    return "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800&auto=format&fit=crop&q=80";
-  }
-  if (text.includes("hoodie") || text.includes("fleece") || text.includes("cotton") || text.includes("apparel") || text.includes("jacket")) {
-    return "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&auto=format&fit=crop&q=80";
-  }
-  if (text.includes("sneaker") || text.includes("shoe") || text.includes("footwear") || text.includes("leather")) {
-    return "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&auto=format&fit=crop&q=80";
-  }
-  if (text.includes("watch")) {
-    return "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80";
-  }
-  if (text.includes("camera")) {
-    return "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&auto=format&fit=crop&q=80";
-  }
-  if (text.includes("laptop") || text.includes("computer")) {
-    return "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&auto=format&fit=crop&q=80";
-  }
-  if (text.includes("chair") || text.includes("desk") || text.includes("furniture") || text.includes("living") || text.includes("home")) {
-    return "https://images.unsplash.com/photo-1580481077111-9a70f2f354f3?w=800&auto=format&fit=crop&q=80";
-  }
-  return "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80";
+  return getFallbackImage(product);
 }
 
 export function ProductCard({ product }: ProductCardProps) {
   const { addItem } = useCartStore();
   const [isAdding, setIsAdding] = useState(false);
   const [added, setAdded] = useState(false);
+  const [imgSrc, setImgSrc] = useState<string>(getProductImage(product));
+  const [hasError, setHasError] = useState(false);
 
   // Pick first variant
   const defaultVariant = product.variants?.[0];
-  const primaryImage = getProductImage(product);
   const variantCount = product.variants?.length || 1;
 
   // Category styling
@@ -77,6 +97,13 @@ export function ProductCard({ product }: ProductCardProps) {
     }
   };
 
+  const handleImageError = () => {
+    if (!hasError) {
+      setHasError(true);
+      setImgSrc(getFallbackImage(product));
+    }
+  };
+
   return (
     <Link
       href={`/products/${product.slug}`}
@@ -84,21 +111,13 @@ export function ProductCard({ product }: ProductCardProps) {
     >
       {/* Image Container */}
       <div className="aspect-square w-full rounded-xl bg-slate-100 relative overflow-hidden flex items-center justify-center">
-        {primaryImage ? (
-          <img
-            src={primaryImage}
-            alt={product.title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            loading="lazy"
-            onError={(e) => {
-              (e.target as HTMLElement).style.display = "none";
-            }}
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center text-4xl font-black text-gray-300 group-hover:scale-105 transition-transform duration-300">
-            📦
-          </div>
-        )}
+        <img
+          src={imgSrc}
+          alt={product.title}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          loading="lazy"
+          onError={handleImageError}
+        />
 
         {/* Category Pill Tag */}
         <span
