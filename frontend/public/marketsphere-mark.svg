@@ -1,12 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="220 130 360 320" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="220 135 360 315" width="100%" height="100%">
   <g fill="#0d1e3d">
+    <!-- Letter M Base Anatomy -->
+    <!-- Left Vertical Leg -->
     <path d="M 285 180 L 307 180 L 307 380 L 285 380 Z"/>
+    
+    <!-- Right Vertical Leg -->
     <path d="M 493 180 L 515 180 L 515 380 L 493 380 Z"/>
+    
+    <!-- Inner V Diagonal (Right Descent to Center Peak) -->
     <path d="M 500 180 L 400 355 L 375 355 L 478 180 Z"/>
+    
+    <!-- Inner V Diagonal (Left Descent - Cut to pass behind S) -->
     <path d="M 300 180 L 335 240 L 315 252 L 285 180 Z"/>
     <path d="M 370 305 L 400 355 L 418 355 L 390 305 Z"/>
+
+    <!-- Dynamic S Ribbons Intertwining M -->
     <path d="M 432 170 C 370 145 355 180 355 210 C 355 245 385 265 425 285 C 470 307 482 335 482 370 C 482 425 432 445 380 435 C 342 427 325 408 322 390 L 344 384 C 347 400 365 416 385 420 C 420 426 458 410 458 370 C 458 340 432 322 395 302 C 350 278 332 255 332 212 C 332 165 372 135 430 152 Z"/>
+
+    <!-- Global Horizon Arc (Sphere Motif) -->
     <path d="M 235 375 C 290 280 510 280 565 375 C 505 300 295 300 235 375 Z"/>
   </g>
 </svg>
-
