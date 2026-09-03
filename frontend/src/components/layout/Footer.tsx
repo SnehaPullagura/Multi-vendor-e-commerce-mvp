@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Store, ShieldCheck, Truck, RefreshCw, Headphones, Lock } from "lucide-react";
+import { Logo } from "@/components/ui/Logo";
 
 export function Footer() {
   return (
@@ -51,12 +52,9 @@ export function Footer() {
         {/* Footer Links */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 py-12">
           <div className="col-span-2">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-lg">
-                M
-              </div>
-              <span className="font-bold text-white text-lg">MarketSphere</span>
-            </div>
+            <Link href="/" className="inline-block group">
+              <Logo variant="horizontal" theme="dark" size="md" />
+            </Link>
             <p className="text-xs text-slate-400 mt-3 leading-relaxed max-w-sm">
               An enterprise-grade, multi-vendor marketplace connecting passionate shoppers with autonomous independent sellers.
             </p>
@@ -65,10 +63,13 @@ export function Footer() {
           <div>
             <h5 className="text-white text-sm font-semibold mb-3">Shop Categories</h5>
             <ul className="space-y-2 text-xs text-slate-400">
-              <li><Link href="/products?category=smart-gear" className="hover:text-white transition-colors">Smart Gear</Link></li>
-              <li><Link href="/products?category=audio" className="hover:text-white transition-colors">Audio & Sound</Link></li>
-              <li><Link href="/products?category=accessories" className="hover:text-white transition-colors">Tech Accessories</Link></li>
-              <li><Link href="/products" className="hover:text-white transition-colors">All Products</Link></li>
+              <li><Link href="/products?category=electronics" className="hover:text-white transition-colors">Electronics & Tech</Link></li>
+              <li><Link href="/products?category=fashion" className="hover:text-white transition-colors">Fashion & Apparel</Link></li>
+              <li><Link href="/products?category=home-living" className="hover:text-white transition-colors">Home & Living</Link></li>
+              <li><Link href="/products?category=beauty" className="hover:text-white transition-colors">Beauty & Wellness</Link></li>
+              <li><Link href="/products?category=sports-outdoor" className="hover:text-white transition-colors">Sports & Outdoors</Link></li>
+              <li><Link href="/products?category=gourmet-provisions" className="hover:text-white transition-colors">Gourmet Provisions</Link></li>
+              <li><Link href="/products" className="hover:text-white transition-colors font-medium text-indigo-400">All Products →</Link></li>
             </ul>
           </div>
 

@@ -74,7 +74,28 @@ class ProductRepository(BaseRepository[Product]):
 
         filters = []
         if category_id:
-            filters.append(Product.category_id == category_id)
+            # Match category by ID or Slug (e.g. "electronics", "audio", or UUID)
+            cat_result = await self.db.execute(
+                select(Category).where(
+                    or_(
+                        Category.id == category_id,
+                        Category.slug == category_id,
+                        Category.name.ilike(category_id),
+                    )
+                )
+            )
+            matched_cat = cat_result.scalar_one_or_none()
+            if matched_cat:
+                # Find all child subcategories of this category
+                children_result = await self.db.execute(
+                    select(Category.id).where(Category.parent_id == matched_cat.id)
+                )
+                child_ids = list(children_result.scalars().all())
+                target_cat_ids = [matched_cat.id] + child_ids
+                filters.append(Product.category_id.in_(target_cat_ids))
+            else:
+                filters.append(Product.category_id == category_id)
+
         if vendor_id:
             filters.append(Product.vendor_id == vendor_id)
         if status:

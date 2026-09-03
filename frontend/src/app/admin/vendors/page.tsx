@@ -82,17 +82,17 @@ export default function AdminVendorsPage() {
     <AdminLayout>
       <div className="space-y-6">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-black text-white">Vendor Store Governance</h1>
-          <p className="text-xs text-slate-400 mt-1">
-            Review store applications, configure custom commission rates, and manage merchant suspensions.
+          <h1 className="text-2xl sm:text-3xl font-black text-slate-900">Vendor Store Governance</h1>
+          <p className="text-xs text-slate-500 mt-1">
+            Review store applications, configure custom commission rates, and manage merchant compliance.
           </p>
         </div>
 
-        {/* Vendors Table */}
-        <div className="bg-slate-950 rounded-3xl border border-slate-800 shadow-sm overflow-hidden">
+        {/* Vendors Table (White and Green Theme) */}
+        <div className="bg-white rounded-3xl border border-emerald-100 shadow-sm overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
-              <thead className="bg-slate-900 border-b border-slate-800 text-slate-400 uppercase font-semibold text-[10px] tracking-wider">
+              <thead className="bg-emerald-50/70 border-b border-emerald-100 text-emerald-900 uppercase font-bold text-[10px] tracking-wider">
                 <tr>
                   <th className="p-4">Store Profile</th>
                   <th className="p-4">Business Email</th>
@@ -102,28 +102,28 @@ export default function AdminVendorsPage() {
                   <th className="p-4 text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-800/60">
+              <tbody className="divide-y divide-emerald-50">
                 {isLoading ? (
                   <tr>
-                    <td colSpan={6} className="p-8 text-center text-slate-500">Loading vendors...</td>
+                    <td colSpan={6} className="p-8 text-center text-slate-400">Loading vendors...</td>
                   </tr>
                 ) : vendors.length > 0 ? (
                   vendors.map((v) => (
-                    <tr key={v.id} className="hover:bg-slate-900/40 transition-colors">
+                    <tr key={v.id} className="hover:bg-emerald-50/30 transition-colors">
                       <td className="p-4">
                         <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-sm shrink-0">
+                          <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-emerald-600 to-teal-700 text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-sm">
                             {v.store_name[0]}
                           </div>
                           <div>
-                            <h4 className="font-bold text-white text-xs">{v.store_name}</h4>
+                            <h4 className="font-bold text-slate-900 text-xs">{v.store_name}</h4>
                             <p className="text-[10px] text-slate-400">Created: {formatDate(v.created_at)}</p>
                           </div>
                         </div>
                       </td>
-                      <td className="p-4 text-slate-300 font-mono">{v.business_email}</td>
-                      <td className="p-4 font-bold text-indigo-400">{v.commission_rate}%</td>
-                      <td className="p-4 text-slate-400 font-mono text-[11px]">
+                      <td className="p-4 text-slate-600 font-mono">{v.business_email}</td>
+                      <td className="p-4 font-bold text-emerald-700">{v.commission_rate}%</td>
+                      <td className="p-4 text-slate-500 font-mono text-[11px]">
                         {v.tax_id || "N/A"}
                       </td>
                       <td className="p-4">
@@ -139,7 +139,7 @@ export default function AdminVendorsPage() {
                             setCommissionRate(v.commission_rate);
                             setRejectionReason(v.rejection_reason || "");
                           }}
-                          className="px-3.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg transition-colors"
+                          className="px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl shadow-sm transition-colors text-xs"
                         >
                           Govern
                         </button>
@@ -148,7 +148,7 @@ export default function AdminVendorsPage() {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan={6} className="p-8 text-center text-slate-500">No vendor stores found.</td>
+                    <td colSpan={6} className="p-8 text-center text-slate-400">No vendor stores found.</td>
                   </tr>
                 )}
               </tbody>
@@ -158,15 +158,15 @@ export default function AdminVendorsPage() {
 
         {/* Modal: Governance Status & Commission */}
         {selectedVendor && (
-          <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
-            <div className="bg-slate-950 rounded-3xl p-6 sm:p-8 max-w-md w-full border border-slate-800 shadow-2xl space-y-6 text-white animate-scale-in">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-                <h3 className="font-bold text-base flex items-center gap-2">
-                  <Store className="w-5 h-5 text-indigo-400" /> Govern: {selectedVendor.store_name}
+          <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+            <div className="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full border border-emerald-100 shadow-2xl space-y-6 text-slate-900 animate-scale-in">
+              <div className="flex items-center justify-between border-b border-emerald-50 pb-3">
+                <h3 className="font-bold text-base flex items-center gap-2 text-slate-900">
+                  <Store className="w-5 h-5 text-emerald-600" /> Govern: {selectedVendor.store_name}
                 </h3>
                 <button
                   onClick={() => setSelectedVendor(null)}
-                  className="text-slate-400 hover:text-white text-xs font-semibold"
+                  className="text-slate-400 hover:text-slate-600 text-xs font-semibold"
                 >
                   ✕ Close
                 </button>
@@ -174,11 +174,11 @@ export default function AdminVendorsPage() {
 
               <form onSubmit={handleUpdateStatus} className="space-y-4 text-xs">
                 <div>
-                  <label className="block font-semibold text-slate-300 mb-1">Store Status</label>
+                  <label className="block font-semibold text-slate-700 mb-1">Store Status</label>
                   <select
                     value={newStatus}
                     onChange={(e) => setNewStatus(e.target.value as VendorStatus)}
-                    className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3 py-2.5 text-xs font-bold text-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
                   >
                     <option value="PENDING_REVIEW">PENDING REVIEW</option>
                     <option value="APPROVED">APPROVED (Active Seller)</option>
@@ -188,7 +188,7 @@ export default function AdminVendorsPage() {
                 </div>
 
                 <div>
-                  <label className="block font-semibold text-slate-300 mb-1">Platform Commission Rate (%)</label>
+                  <label className="block font-semibold text-slate-700 mb-1">Platform Commission Rate (%)</label>
                   <input
                     type="number"
                     step="0.5"
@@ -197,36 +197,36 @@ export default function AdminVendorsPage() {
                     required
                     value={commissionRate}
                     onChange={(e) => setCommissionRate(parseFloat(e.target.value) || 0)}
-                    className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm font-bold text-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm font-bold text-slate-900 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
                   />
                 </div>
 
                 {newStatus === "REJECTED" || newStatus === "SUSPENDED" ? (
                   <div>
-                    <label className="block font-semibold text-slate-300 mb-1">Reason for Rejection / Suspension</label>
+                    <label className="block font-semibold text-slate-700 mb-1">Reason for Rejection / Suspension</label>
                     <textarea
                       rows={3}
                       required
                       placeholder="KYC documentation mismatch or violation of terms..."
                       value={rejectionReason}
                       onChange={(e) => setRejectionReason(e.target.value)}
-                      className="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-xs text-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs text-slate-800 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
                     />
                   </div>
                 ) : null}
 
-                <div className="flex justify-end gap-2 pt-4 border-t border-slate-800">
+                <div className="flex justify-end gap-2 pt-4 border-t border-emerald-50">
                   <button
                     type="button"
                     onClick={() => setSelectedVendor(null)}
-                    className="px-4 py-2 bg-slate-800 hover:bg-slate-700 font-semibold rounded-xl text-slate-300"
+                    className="px-4 py-2 bg-slate-100 hover:bg-slate-200 font-semibold rounded-xl text-slate-600"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
                     disabled={isUpdating}
-                    className="px-5 py-2 bg-rose-600 hover:bg-rose-700 font-bold text-white rounded-xl shadow-md disabled:bg-slate-800"
+                    className="px-5 py-2 bg-emerald-600 hover:bg-emerald-700 font-bold text-white rounded-xl shadow-md disabled:bg-slate-300"
                   >
                     {isUpdating ? "Saving..." : "Save Governance"}
                   </button>

@@ -15,6 +15,7 @@ import {
   PlusCircle,
 } from "lucide-react";
 import { useAuthStore } from "@/store/useAuthStore";
+import { Logo } from "@/components/ui/Logo";
 
 interface SellerLayoutProps {
   children: React.ReactNode;
@@ -49,8 +50,8 @@ export function SellerLayout({ children }: SellerLayoutProps) {
         {/* Store Title */}
         <div className="p-6 border-b border-slate-800">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold">
-              <Store className="w-5 h-5" />
+            <div className="p-2 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-center">
+              <Logo variant="mark" theme="dark" size="sm" />
             </div>
             <div className="min-w-0">
               <h2 className="font-bold text-white text-sm truncate">{vendor?.store_name || "Vendor Hub"}</h2>

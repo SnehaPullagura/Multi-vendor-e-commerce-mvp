@@ -57,11 +57,17 @@ export default function ProductDetailPage() {
     }
   }, [slug]);
 
+  const [added, setAdded] = useState(false);
+
   const handleAddToCart = async () => {
     if (!selectedVariant) return;
     setIsAdding(true);
-    await addItem(selectedVariant.id, quantity);
+    const success = await addItem(selectedVariant.id, quantity);
     setIsAdding(false);
+    if (success) {
+      setAdded(true);
+      setTimeout(() => setAdded(false), 2500);
+    }
   };
 
   const handleBuyNow = async () => {
@@ -142,14 +148,39 @@ export default function ProductDetailPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-white rounded-3xl p-6 sm:p-10 border border-gray-100 shadow-sm">
           {/* Left: Product Images */}
           <div className="flex flex-col gap-4">
-            <div className="aspect-square w-full rounded-2xl bg-slate-50 border border-gray-100 flex items-center justify-center p-8 relative overflow-hidden">
-              <div className="text-8xl select-none">📦</div>
+            <div className="aspect-square w-full rounded-2xl bg-slate-100 border border-gray-100 flex items-center justify-center relative overflow-hidden">
+              {product.images && product.images.length > 0 && product.images[0].image_url ? (
+                <img
+                  src={product.images[0].image_url}
+                  alt={product.title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    (e.target as HTMLElement).style.display = "none";
+                  }}
+                />
+              ) : (
+                <div className="text-8xl select-none">📦</div>
+              )}
               {product.is_featured && (
                 <span className="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
                   FEATURED PICK
                 </span>
               )}
             </div>
+
+            {/* Additional gallery thumbnails if available */}
+            {product.images && product.images.length > 1 && (
+              <div className="grid grid-cols-4 gap-3">
+                {product.images.map((img, idx) => (
+                  <div
+                    key={img.id || idx}
+                    className="aspect-square rounded-xl bg-slate-100 border border-gray-200 overflow-hidden cursor-pointer hover:border-brand-600 transition-colors"
+                  >
+                    <img src={img.image_url} alt={`${product.title} view ${idx + 1}`} className="w-full h-full object-cover" />
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Right: Product Details & Variant Picker */}
@@ -248,9 +279,21 @@ export default function ProductDetailPage() {
                 <button
                   onClick={handleAddToCart}
                   disabled={!inStock || isAdding}
-                  className="flex-1 px-6 py-3.5 rounded-full bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed"
+                  className={`flex-1 px-6 py-3.5 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 ${
+                    added
+                      ? "bg-emerald-600 text-white"
+                      : "bg-brand-600 hover:bg-brand-700 text-white"
+                  } disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed`}
                 >
-                  <ShoppingBag className="w-4 h-4" /> Add to Cart
+                  {added ? (
+                    <>
+                      <CheckCircle className="w-4 h-4" /> Added to Cart!
+                    </>
+                  ) : (
+                    <>
+                      <ShoppingBag className="w-4 h-4" /> Add to Cart
+                    </>
+                  )}
                 </button>
                 <button
                   onClick={handleBuyNow}

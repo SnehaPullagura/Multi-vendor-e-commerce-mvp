@@ -9,6 +9,7 @@ import { Footer } from "@/components/layout/Footer";
 import { useAuthStore } from "@/store/useAuthStore";
 import { useToastStore } from "@/store/useToastStore";
 import { api } from "@/lib/api";
+import { Logo } from "@/components/ui/Logo";
 
 function LoginForm() {
   const router = useRouter();
@@ -73,7 +74,10 @@ function LoginForm() {
 
   return (
     <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl space-y-6">
-      <div className="text-center">
+      <div className="flex flex-col items-center text-center pb-2">
+        <Link href="/" className="mb-4 group hover:opacity-90 transition-opacity">
+          <Logo variant="full" theme="navy" size="md" />
+        </Link>
         <h1 className="text-2xl font-black text-gray-900">Sign In</h1>
         <p className="text-xs text-gray-500 mt-1">
           Access your Customer, Seller, or Admin portal

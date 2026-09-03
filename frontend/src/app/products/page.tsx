@@ -8,7 +8,8 @@ import { ProductCard } from "@/components/product/ProductCard";
 import { ProductFilters } from "@/components/product/ProductFilters";
 import { Category, Product } from "@/types";
 import { api } from "@/lib/api";
-import { Search, PackageOpen } from "lucide-react";
+import { Search, PackageOpen, Sparkles, Filter, X } from "lucide-react";
+import { CATEGORY_META_LIST, getCategoryMeta } from "@/lib/categoryMeta";
 
 function ProductsCatalogContent() {
   const searchParams = useSearchParams();
@@ -40,6 +41,15 @@ function ProductsCatalogContent() {
     }
     loadCategories();
   }, []);
+
+  // Sync category param from URL if changed
+  useEffect(() => {
+    const urlCat = searchParams.get("category");
+    if (urlCat !== null && urlCat !== category) {
+      setCategory(urlCat);
+      setPage(1);
+    }
+  }, [searchParams]);
 
   // Fetch Products with filters
   const fetchProducts = useCallback(async () => {
@@ -77,6 +87,18 @@ function ProductsCatalogContent() {
     fetchProducts();
   }, [fetchProducts]);
 
+  const handleSelectCategory = (catSlug: string) => {
+    setCategory(catSlug);
+    setPage(1);
+    const newParams = new URLSearchParams(searchParams.toString());
+    if (catSlug) {
+      newParams.set("category", catSlug);
+    } else {
+      newParams.delete("category");
+    }
+    router.push(`/products?${newParams.toString()}`);
+  };
+
   const handleResetFilters = () => {
     setSearchQuery("");
     setCategory("");
@@ -85,18 +107,21 @@ function ProductsCatalogContent() {
     setMaxPrice("");
     setSortBy("newest");
     setPage(1);
+    router.push("/products");
   };
+
+  const activeCategoryMeta = category ? getCategoryMeta(category) : null;
 
   return (
     <div className="w-full">
       {/* Header Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-8 border-b border-gray-200">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-gray-200">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
-            {searchQuery ? `Search Results for "${searchQuery}"` : "Explore Catalog"}
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+            {searchQuery ? `Search Results for "${searchQuery}"` : "Marketplace Catalog"}
           </h1>
           <p className="text-sm text-gray-500 mt-1">
-            Showing <span className="font-semibold text-gray-900">{total}</span> verified products from marketplace sellers
+            Explore <span className="font-semibold text-gray-900">{total}</span> verified products across 6 curated marketplace departments
           </p>
         </div>
 
@@ -112,6 +137,80 @@ function ProductsCatalogContent() {
           <Search className="w-4 h-4 text-gray-400 absolute left-3.5 top-3.5" />
         </div>
       </div>
+
+      {/* Differentiated Category Selector Tabs */}
+      <div className="mt-6 flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin">
+        <button
+          onClick={() => handleSelectCategory("")}
+          className={`px-4 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap flex items-center gap-1.5 shadow-sm ${
+            !category
+              ? "bg-[#0d1e3d] text-white shadow-md scale-105"
+              : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
+          }`}
+        >
+          <span>✨</span>
+          <span>All Departments (210)</span>
+        </button>
+
+        {CATEGORY_META_LIST.map((c) => {
+          const isSelected = category === c.slug || category === c.id;
+          return (
+            <button
+              key={c.id}
+              onClick={() => handleSelectCategory(c.slug)}
+              className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap flex items-center gap-1.5 shadow-sm ${
+                isSelected
+                  ? `bg-gradient-to-r ${c.gradient} text-white shadow-md scale-105 ring-2 ring-offset-2 ring-brand-500`
+                  : `bg-white ${c.badgeText} hover:bg-slate-50 border ${c.badgeBorder}`
+              }`}
+            >
+              <span>{c.icon}</span>
+              <span>{c.name.split(" ")[0]} (35+)</span>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Active Department Spotlight Banner */}
+      {activeCategoryMeta && (
+        <div className="mt-6 p-6 rounded-2xl bg-gradient-to-r from-slate-900 to-indigo-950 text-white shadow-lg relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6 border border-slate-800">
+          <div className="relative z-10 max-w-2xl">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-2xl">{activeCategoryMeta.icon}</span>
+              <span className="text-xs font-bold tracking-widest uppercase text-indigo-300">
+                Department Spotlight
+              </span>
+            </div>
+            <h2 className="text-xl md:text-2xl font-bold tracking-tight text-white">
+              {activeCategoryMeta.name}
+            </h2>
+            <p className="text-xs md:text-sm text-slate-300 mt-1">
+              {activeCategoryMeta.description}
+            </p>
+            {/* Subcategory Pills */}
+            <div className="flex flex-wrap gap-1.5 mt-3">
+              {activeCategoryMeta.subcategories.map((sub, idx) => (
+                <span
+                  key={idx}
+                  className="bg-white/10 hover:bg-white/20 text-white text-[11px] font-medium px-2.5 py-1 rounded-lg backdrop-blur-md border border-white/10"
+                >
+                  {sub}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative z-10 flex items-center gap-2 shrink-0">
+            <button
+              onClick={() => handleSelectCategory("")}
+              className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 border border-white/20 transition-colors"
+            >
+              <X className="w-3.5 h-3.5" />
+              <span>Show All Departments</span>
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Layout Grid: Sidebar Filters + Products Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mt-8">

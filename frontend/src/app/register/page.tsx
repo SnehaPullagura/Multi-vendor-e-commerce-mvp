@@ -9,6 +9,7 @@ import { Footer } from "@/components/layout/Footer";
 import { useAuthStore } from "@/store/useAuthStore";
 import { useToastStore } from "@/store/useToastStore";
 import { api } from "@/lib/api";
+import { Logo } from "@/components/ui/Logo";
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -17,19 +18,20 @@ export default function RegisterPage() {
 
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
+  const [phone, setPhone] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       setIsLoading(true);
-      const res = await api.post("/auth/register/customer", {
+      const res = await api.post("/auth/register", {
         full_name: fullName,
         email,
-        phone,
         password,
+        phone: phone || undefined,
+        role: "CUSTOMER",
       });
 
       if (res.data.success) {
@@ -41,9 +43,8 @@ export default function RegisterPage() {
           role: data.role,
           is_active: true,
           is_verified: true,
-          created_at: new Date().toISOString(),
-          updated_at: new Date().toISOString(),
         };
+
         login(data.access_token, user);
         addToast({
           type: "success",
@@ -69,10 +70,13 @@ export default function RegisterPage() {
 
       <main className="max-w-md mx-auto px-4 py-16 w-full flex-1 flex flex-col justify-center">
         <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl space-y-6">
-          <div className="text-center">
-            <h1 className="text-2xl font-black text-gray-900">Create Customer Account</h1>
+          <div className="flex flex-col items-center text-center pb-2">
+            <Link href="/" className="mb-4 group hover:opacity-90 transition-opacity">
+              <Logo variant="full" theme="navy" size="md" />
+            </Link>
+            <h1 className="text-2xl font-black text-gray-900">Create Account</h1>
             <p className="text-xs text-gray-500 mt-1">
-              Shop directly from thousands of independent vendors
+              Shop directly from verified independent vendors
             </p>
           </div>
 

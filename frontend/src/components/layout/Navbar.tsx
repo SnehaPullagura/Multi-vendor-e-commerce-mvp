@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { useAuthStore } from "@/store/useAuthStore";
 import { useCartStore } from "@/store/useCartStore";
+import { Logo } from "@/components/ui/Logo";
 
 export function Navbar() {
   const router = useRouter();
@@ -71,14 +72,8 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 gap-4">
           {/* Logo */}
           <div className="flex items-center gap-8">
-            <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center text-white font-black text-xl shadow-md group-hover:scale-105 transition-transform">
-                M
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-gray-900 text-lg tracking-tight leading-none">MarketSphere</span>
-                <span className="text-[10px] text-gray-500 font-medium tracking-wider uppercase mt-0.5">Multi-Vendor Marketplace</span>
-              </div>
+            <Link href="/" className="group hover:opacity-90 transition-opacity">
+              <Logo variant="horizontal" theme="navy" size="md" />
             </Link>
 
             {/* Desktop Navigation Links */}

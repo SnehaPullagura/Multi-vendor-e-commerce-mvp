@@ -87,8 +87,19 @@ export default function CartPage() {
                 <div className="divide-y divide-gray-50">
                   {group.items.map((item) => (
                     <div key={item.id} className="py-4 flex items-center gap-4 first:pt-0 last:pb-0">
-                      <div className="w-16 h-16 rounded-xl bg-slate-50 border border-gray-100 flex items-center justify-center text-2xl shrink-0">
-                        📦
+                      <div className="w-16 h-16 rounded-xl bg-slate-50 border border-gray-100 flex items-center justify-center overflow-hidden shrink-0">
+                        {item.image_url ? (
+                          <img
+                            src={item.image_url}
+                            alt={item.product_title}
+                            className="w-full h-full object-cover rounded-xl"
+                            onError={(e) => {
+                              (e.target as HTMLElement).style.display = "none";
+                            }}
+                          />
+                        ) : (
+                          <span className="text-2xl">📦</span>
+                        )}
                       </div>
 
                       <div className="flex-1 min-w-0">

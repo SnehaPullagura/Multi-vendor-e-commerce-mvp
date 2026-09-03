@@ -9,6 +9,7 @@ import { Footer } from "@/components/layout/Footer";
 import { useAuthStore } from "@/store/useAuthStore";
 import { useToastStore } from "@/store/useToastStore";
 import { api } from "@/lib/api";
+import { Logo } from "@/components/ui/Logo";
 
 export default function RegisterSellerPage() {
   const router = useRouter();
@@ -49,14 +50,12 @@ export default function RegisterSellerPage() {
           role: data.role,
           is_active: true,
           is_verified: true,
-          created_at: new Date().toISOString(),
-          updated_at: new Date().toISOString(),
         };
         login(data.access_token, user);
         addToast({
           type: "success",
-          title: "Merchant Store Registered!",
-          message: "Your vendor account is approved for MVP testing. Welcome aboard!",
+          title: "Store Registration Submitted!",
+          message: "Welcome to the MarketSphere Merchant Hub.",
         });
         router.push("/seller/dashboard");
       }
@@ -77,10 +76,10 @@ export default function RegisterSellerPage() {
 
       <main className="max-w-2xl mx-auto px-4 py-16 w-full flex-1">
         <div className="bg-white rounded-3xl p-8 sm:p-10 border border-gray-100 shadow-xl space-y-6">
-          <div className="text-center">
-            <div className="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center mx-auto mb-3">
-              <Store className="w-6 h-6" />
-            </div>
+          <div className="flex flex-col items-center text-center pb-2">
+            <Link href="/" className="mb-4 group hover:opacity-90 transition-opacity">
+              <Logo variant="full" theme="navy" size="md" />
+            </Link>
             <h1 className="text-2xl sm:text-3xl font-black text-gray-900">Become a Marketplace Seller</h1>
             <p className="text-xs text-gray-500 mt-1 max-w-md mx-auto">
               Launch your independent digital storefront and reach customers nationwide with our multi-vendor fulfillment engine.
