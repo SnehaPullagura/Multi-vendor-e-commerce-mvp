@@ -49,7 +49,7 @@ export function ProductFilters({
       {/* Category Departments */}
       <div>
         <label className="block text-xs font-bold text-gray-800 uppercase tracking-wider mb-2.5">
-          Departments
+          Departments & Categories
         </label>
         <div className="space-y-1.5">
           <button
@@ -64,27 +64,59 @@ export function ProductFilters({
               <span>✨</span>
               <span>All Departments</span>
             </div>
-            <span className="text-[10px] opacity-75">210</span>
+            <span className="text-[10px] opacity-75 font-mono font-bold">210</span>
           </button>
 
           {CATEGORY_META_LIST.map((meta) => {
-            const isSelected = selectedCategory === meta.slug || selectedCategory === meta.id;
+            const isRootSelected = selectedCategory === meta.slug || selectedCategory === meta.id;
+            const isChildSelected = meta.subcategories.some((sub) => sub.slug === selectedCategory);
+            const isExpanded = isRootSelected || isChildSelected;
+
             return (
-              <button
-                key={meta.id}
-                onClick={() => onSelectCategory(meta.slug)}
-                className={`w-full text-left px-3 py-2 rounded-xl text-xs font-semibold transition-all flex items-center justify-between ${
-                  isSelected
-                    ? `${meta.badgeBg} ${meta.badgeText} border ${meta.badgeBorder} font-bold shadow-sm`
-                    : "text-gray-600 hover:bg-gray-50 border border-transparent"
-                }`}
-              >
-                <div className="flex items-center gap-2 truncate">
-                  <span>{meta.icon}</span>
-                  <span className="truncate">{meta.name}</span>
-                </div>
-                <span className="text-[10px] opacity-70 ml-1 font-mono">35+</span>
-              </button>
+              <div key={meta.id} className="space-y-1">
+                <button
+                  onClick={() => onSelectCategory(meta.slug)}
+                  className={`w-full text-left px-3 py-2 rounded-xl text-xs font-semibold transition-all flex items-center justify-between ${
+                    isRootSelected
+                      ? `${meta.badgeBg} ${meta.badgeText} border ${meta.badgeBorder} font-bold shadow-sm`
+                      : isChildSelected
+                      ? "bg-slate-100 text-slate-900 font-bold border border-slate-200"
+                      : "text-gray-600 hover:bg-gray-50 border border-transparent"
+                  }`}
+                >
+                  <div className="flex items-center gap-2 truncate">
+                    <span>{meta.icon}</span>
+                    <span className="truncate">{meta.name}</span>
+                  </div>
+                  <span className="text-[10px] opacity-70 ml-1 font-mono">35</span>
+                </button>
+
+                {/* Subcategories (Expanded when category is active) */}
+                {isExpanded && (
+                  <div className="pl-6 pr-1 py-1 space-y-1 border-l-2 border-indigo-100 ml-3">
+                    {meta.subcategories.map((sub) => {
+                      const isSubSelected = selectedCategory === sub.slug;
+                      return (
+                        <button
+                          key={sub.slug}
+                          onClick={() => onSelectCategory(sub.slug)}
+                          className={`w-full text-left px-2.5 py-1.5 rounded-lg text-[11px] transition-all flex items-center justify-between ${
+                            isSubSelected
+                              ? "bg-indigo-600 text-white font-bold shadow-sm"
+                              : "text-slate-600 hover:bg-slate-100 hover:text-slate-900 font-medium"
+                          }`}
+                        >
+                          <span className="truncate flex items-center gap-1.5">
+                            <span>{sub.icon}</span>
+                            <span>{sub.name}</span>
+                          </span>
+                          <span className="text-[10px] opacity-75 font-mono">~12</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
             );
           })}
         </div>

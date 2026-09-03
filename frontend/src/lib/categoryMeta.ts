@@ -1,3 +1,9 @@
+export interface SubCategoryItem {
+  name: string;
+  slug: string;
+  icon?: string;
+}
+
 export interface CategoryMeta {
   id: string;
   name: string;
@@ -10,7 +16,7 @@ export interface CategoryMeta {
   gradient: string;
   tagline: string;
   description: string;
-  subcategories: string[];
+  subcategories: SubCategoryItem[];
 }
 
 export const CATEGORY_META_LIST: CategoryMeta[] = [
@@ -26,7 +32,11 @@ export const CATEGORY_META_LIST: CategoryMeta[] = [
     gradient: "from-blue-600 to-indigo-600",
     tagline: "Audiophile Grade & Next-Gen Compute",
     description: "Discrete DACs, ANC audio monitors, OLED displays, Wi-Fi 7 networking, and titanium wearables.",
-    subcategories: ["Headphones & Studio Audio", "Smartphones & Mobile", "Computing Peripherals", "Smart Home Hubs"],
+    subcategories: [
+      { name: "Headphones & Audio Gear", slug: "audio", icon: "🎧" },
+      { name: "Smartphones & Mobile Tech", slug: "smartphones", icon: "📱" },
+      { name: "Computing & Peripherals", slug: "computing", icon: "💻" },
+    ],
   },
   {
     id: "fashion",
@@ -40,7 +50,11 @@ export const CATEGORY_META_LIST: CategoryMeta[] = [
     gradient: "from-purple-600 to-pink-600",
     tagline: "Artisanal Textiles & Tailored Footwear",
     description: "Handcrafted Portuguese Nappa sneakers, 450 GSM French terry hoodies, and selvedge denim.",
-    subcategories: ["Men's Luxury Apparel", "Handcrafted Footwear", "Technical Outerwear", "Leather Goods"],
+    subcategories: [
+      { name: "Men's Luxury Apparel", slug: "mens-clothing", icon: "👔" },
+      { name: "Women's Footwear & Leather", slug: "womens-footwear", icon: "👠" },
+      { name: "Outerwear & Streetwear", slug: "streetwear", icon: "🧥" },
+    ],
   },
   {
     id: "home-living",
@@ -54,7 +68,11 @@ export const CATEGORY_META_LIST: CategoryMeta[] = [
     gradient: "from-amber-600 to-orange-600",
     tagline: "Scandinavian Furniture & Studio Decor",
     description: "Solid oak sit-stand workstations, ergonomic mesh chairs, Belgian linen, and cast iron cookware.",
-    subcategories: ["Minimalist Furniture", "Studio Lighting", "Artisanal Tableware", "Smart Air & Aromatherapy"],
+    subcategories: [
+      { name: "Minimalist Furniture", slug: "furniture", icon: "🪑" },
+      { name: "Lighting & Decor", slug: "lighting", icon: "💡" },
+      { name: "Kitchen & Tableware", slug: "smart-kitchen", icon: "🍳" },
+    ],
   },
   {
     id: "beauty",
@@ -68,7 +86,11 @@ export const CATEGORY_META_LIST: CategoryMeta[] = [
     gradient: "from-emerald-600 to-teal-600",
     tagline: "Clean Botanical Formulations & Clinical Serums",
     description: "Triple-peptide barrier creams, cold-pressed rosehip seed oils, bio-cellulose collagen, and rose quartz tools.",
-    subcategories: ["Clinical Active Serums", "Botanical Barrier Creams", "Scalp & Hair Rituals", "Clean Aromatherapy"],
+    subcategories: [
+      { name: "Clinical Skincare & Serums", slug: "skincare", icon: "🧪" },
+      { name: "Organic Body & Haircare", slug: "haircare", icon: "🧴" },
+      { name: "Wellness & Aromatherapy", slug: "aromatherapy", icon: "🕯️" },
+    ],
   },
   {
     id: "sports-outdoor",
@@ -82,7 +104,11 @@ export const CATEGORY_META_LIST: CategoryMeta[] = [
     gradient: "from-orange-600 to-red-600",
     tagline: "High-Performance Training & Trail Gear",
     description: "Carbon-plate trail shoes, solar GPS multisport watches, non-slip 6mm mats, and percussion recovery guns.",
-    subcategories: ["Endurance Trail Gear", "Yoga & Alignment", "Strength & Recovery", "Ultralight Camping"],
+    subcategories: [
+      { name: "Fitness & Training Gear", slug: "fitness-gear", icon: "🏋️" },
+      { name: "Outdoor & Trail Adventure", slug: "outdoor-adventure", icon: "🧗" },
+      { name: "Recovery & Performance", slug: "recovery", icon: "⚡" },
+    ],
   },
   {
     id: "gourmet-provisions",
@@ -96,18 +122,30 @@ export const CATEGORY_META_LIST: CategoryMeta[] = [
     gradient: "from-rose-600 to-amber-700",
     tagline: "Single-Origin Roasts & DOP Specialty Pantry",
     description: "Ethiopian Yirgacheffe beans, 25-year aged Modena balsamic, ceremonial Uji matcha, and Cretan extra virgin oils.",
-    subcategories: ["Single-Origin Coffee", "Ceremonial Teas & Matchas", "Aged DOP Specialties", "Wild Foraged Salts"],
+    subcategories: [
+      { name: "Single-Origin Coffee", slug: "artisan-coffee", icon: "☕" },
+      { name: "Artisanal Pantry & Spices", slug: "specialty-pantry", icon: "🧂" },
+      { name: "Fine Confectionery", slug: "sommelier-selection", icon: "🍫" },
+    ],
   },
 ];
 
 export function getCategoryMeta(categorySlugOrId?: string, productSku?: string, productTitle?: string): CategoryMeta {
   if (categorySlugOrId) {
     const slug = categorySlugOrId.toLowerCase();
-    const found = CATEGORY_META_LIST.find((c) => c.slug === slug || c.id === slug);
-    if (found) return found;
+    // Direct root match
+    const foundRoot = CATEGORY_META_LIST.find((c) => c.slug === slug || c.id === slug);
+    if (foundRoot) return foundRoot;
+
+    // Subcategory match -> return parent category meta
+    for (const root of CATEGORY_META_LIST) {
+      if (root.subcategories.some((sub) => sub.slug === slug || sub.slug.includes(slug) || slug.includes(sub.slug))) {
+        return root;
+      }
+    }
   }
 
-  // Fallback detection via SKU or Title
+  // Fallback detection via SKU
   if (productSku) {
     const prefix = productSku.toUpperCase();
     if (prefix.startsWith("ELEC") || prefix.startsWith("AUD") || prefix.startsWith("QNT")) return CATEGORY_META_LIST[0];
@@ -118,6 +156,7 @@ export function getCategoryMeta(categorySlugOrId?: string, productSku?: string, 
     if (prefix.startsWith("GOUR") || prefix.startsWith("COF") || prefix.startsWith("VIN")) return CATEGORY_META_LIST[5];
   }
 
+  // Fallback detection via Title
   if (productTitle) {
     const lower = productTitle.toLowerCase();
     if (lower.includes("headphone") || lower.includes("dac") || lower.includes("oled") || lower.includes("keyboard") || lower.includes("phone") || lower.includes("hub") || lower.includes("speaker")) return CATEGORY_META_LIST[0];
@@ -130,4 +169,3 @@ export function getCategoryMeta(categorySlugOrId?: string, productSku?: string, 
 
   return CATEGORY_META_LIST[0];
 }
-

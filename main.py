@@ -6,7 +6,6 @@ import os
 import sys
 import subprocess
 import time
-import signal
 import logging
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
@@ -23,9 +22,9 @@ def start_platform():
     backend_proc = subprocess.Popen(backend_cmd, cwd=backend_dir)
 
     logger.info("Starting Next.js 14 Web Portal on http://localhost:3000...")
-    frontend_cmd = ["npm", "start"]
+    frontend_cmd = ["npm", "run", "dev"]
     if sys.platform == "win32":
-        frontend_cmd = ["npm.cmd", "start"]
+        frontend_cmd = ["npm.cmd", "run", "dev"]
     
     frontend_proc = subprocess.Popen(frontend_cmd, cwd=frontend_dir)
 

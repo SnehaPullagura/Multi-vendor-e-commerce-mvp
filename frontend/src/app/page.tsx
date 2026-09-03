@@ -188,14 +188,16 @@ export default function HomePage() {
               </div>
               <p className="text-xs sm:text-sm text-gray-500 mt-1">{activeDeptMeta.description}</p>
             </div>
-            <div className="flex flex-wrap gap-1.5">
-              {activeDeptMeta.subcategories.map((sub, idx) => (
-                <span
-                  key={idx}
-                  className="bg-slate-100 text-slate-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg"
+            <div className="flex flex-wrap gap-2">
+              {activeDeptMeta.subcategories.map((sub) => (
+                <Link
+                  key={sub.slug}
+                  href={`/products?category=${sub.slug}`}
+                  className="bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 text-slate-700 text-[11px] font-semibold px-3 py-1.5 rounded-xl border border-gray-200 transition-colors flex items-center gap-1.5 shadow-sm"
                 >
-                  {sub}
-                </span>
+                  <span>{sub.icon}</span>
+                  <span>{sub.name}</span>
+                </Link>
               ))}
             </div>
           </div>

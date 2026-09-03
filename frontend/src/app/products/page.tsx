@@ -187,26 +187,50 @@ function ProductsCatalogContent() {
             <p className="text-xs md:text-sm text-slate-300 mt-1">
               {activeCategoryMeta.description}
             </p>
-            {/* Subcategory Pills */}
-            <div className="flex flex-wrap gap-1.5 mt-3">
-              {activeCategoryMeta.subcategories.map((sub, idx) => (
-                <span
-                  key={idx}
-                  className="bg-white/10 hover:bg-white/20 text-white text-[11px] font-medium px-2.5 py-1 rounded-lg backdrop-blur-md border border-white/10"
-                >
-                  {sub}
-                </span>
-              ))}
+            
+            {/* Interactive Subcategory Filter Pills */}
+            <div className="flex flex-wrap items-center gap-2 mt-4">
+              <span className="text-[11px] font-bold text-indigo-200 uppercase tracking-wider mr-1">
+                Subcategories:
+              </span>
+              <button
+                onClick={() => handleSelectCategory(activeCategoryMeta.slug)}
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                  category === activeCategoryMeta.slug
+                    ? "bg-white text-slate-950 shadow-md ring-2 ring-indigo-400"
+                    : "bg-white/10 hover:bg-white/20 text-white border border-white/10"
+                }`}
+              >
+                <span>All {activeCategoryMeta.name.split(" ")[0]} (35)</span>
+              </button>
+
+              {activeCategoryMeta.subcategories.map((sub) => {
+                const isSubActive = category === sub.slug;
+                return (
+                  <button
+                    key={sub.slug}
+                    onClick={() => handleSelectCategory(sub.slug)}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                      isSubActive
+                        ? "bg-indigo-500 text-white shadow-md ring-2 ring-indigo-300 scale-105"
+                        : "bg-white/10 hover:bg-white/20 text-white border border-white/10"
+                    }`}
+                  >
+                    <span>{sub.icon}</span>
+                    <span>{sub.name}</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 
-          <div className="relative z-10 flex items-center gap-2 shrink-0">
+          <div className="relative z-10 flex items-center gap-2 shrink-0 self-start md:self-center">
             <button
               onClick={() => handleSelectCategory("")}
-              className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 border border-white/20 transition-colors"
+              className="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 border border-white/20 transition-colors shadow-sm"
             >
               <X className="w-3.5 h-3.5" />
-              <span>Show All Departments</span>
+              <span>Show All 210 Products</span>
             </button>
           </div>
         </div>
