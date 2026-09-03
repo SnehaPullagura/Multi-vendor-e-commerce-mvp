@@ -53,15 +53,24 @@ class ExportImportService:
 
         return output.getvalue()
 
+    MAX_IMPORT_BATCH_SIZE = 500
+
     async def validate_and_import_products_csv(self, vendor_id: str, csv_content: str) -> Dict[str, Any]:
         """
-        Parses, validates, and creates product records from CSV format.
+        Parses, validates, and creates product records from CSV format with safety batch limits.
         """
-        reader = csv.DictReader(io.StringIO(csv_content))
+        rows = list(csv.DictReader(io.StringIO(csv_content)))
+        if len(rows) > self.MAX_IMPORT_BATCH_SIZE:
+            return {
+                "imported_count": 0,
+                "failed_count": len(rows),
+                "errors": [f"Batch size exceeds maximum allowed threshold of {self.MAX_IMPORT_BATCH_SIZE} items per import job. Please split your file."],
+            }
+
         successful = 0
         errors = []
 
-        for line_num, row in enumerate(reader, start=2):
+        for line_num, row in enumerate(rows, start=2):
             title = row.get("Title", "").strip()
             price_raw = row.get("Base Price", "0").strip()
 

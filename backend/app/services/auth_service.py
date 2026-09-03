@@ -63,23 +63,19 @@ class AuthService:
             "is_verified": False,
         })
 
-        store_slug = slugify(req.store_name)
-        # Check slug uniqueness
-        base_slug = store_slug
-        counter = 1
-        while await self.vendor_repo.get_by_slug(store_slug):
-            store_slug = f"{base_slug}-{counter}"
-            counter += 1
+        store_slug = slugify(req.store_name.strip())
+        if await self.vendor_repo.get_by_slug(store_slug):
+            raise ConflictException("A store with this name or web handle already exists. Please choose a unique store name.")
 
         vendor = await self.vendor_repo.create({
             "user_id": user.id,
             "store_name": req.store_name.strip(),
             "slug": store_slug,
-            "description": req.store_description,
+            "description": req.store_description.strip() if req.store_description else None,
             "business_email": req.email.lower().strip(),
             "phone": req.phone.strip(),
-            "tax_id": req.tax_id,
-            "bank_account_details": req.bank_account_details,
+            "tax_id": req.tax_id.strip() if req.tax_id else None,
+            "bank_account_details": req.bank_account_details.strip() if req.bank_account_details else None,
             "status": VendorStatus.PENDING_REVIEW,
         })
 

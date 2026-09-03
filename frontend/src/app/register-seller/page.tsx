@@ -31,14 +31,14 @@ export default function RegisterSellerPage() {
     try {
       setIsLoading(true);
       const res = await api.post("/auth/register/seller", {
-        full_name: fullName,
-        email,
+        full_name: fullName.trim(),
+        email: email.trim().toLowerCase(),
         password,
-        phone,
-        store_name: storeName,
-        description: storeDescription,
-        tax_id: taxId || undefined,
-        bank_account_details: bankAccount || undefined,
+        phone: phone.trim(),
+        store_name: storeName.trim(),
+        description: storeDescription.trim() || undefined,
+        tax_id: taxId.trim() || undefined,
+        bank_account_details: bankAccount.trim() || undefined,
       });
 
       if (res.data.success) {
