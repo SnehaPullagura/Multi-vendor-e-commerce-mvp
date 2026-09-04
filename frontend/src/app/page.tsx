@@ -20,21 +20,128 @@ import { Category, Product, VendorPublic } from "@/types";
 import { api } from "@/lib/api";
 import { CATEGORY_META_LIST } from "@/lib/categoryMeta";
 
+const DEFAULT_FEATURED_PRODUCTS: Product[] = [
+  {
+    id: "feat-1",
+    title: "AeroSound Pro Wireless ANC Studio Headphones",
+    slug: "aerosound-pro-anc-headphones",
+    description: "Lossless LDAC wireless planar magnetic headphones with active hybrid noise cancellation.",
+    base_price: 349.00,
+    brand: "AeroSound",
+    is_featured: true,
+    images: [{ id: "img-1", product_id: "feat-1", image_url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800", is_primary: true, display_order: 0 }],
+    variants: [{ id: "var-1", product_id: "feat-1", title: "Space Gray", sku: "AERO-ANC-GRY", price: 349.00, stock_quantity: 45 }],
+    category: { id: "cat-1", name: "Electronics & Smart Audio", slug: "electronics" },
+  },
+  {
+    id: "feat-2",
+    title: "Nova Titan 5G Smartphone 256GB Sapphire",
+    slug: "nova-titan-5g-phone",
+    description: "Aerospace titanium chassis, 120Hz LTPO OLED display, and cinematic quad camera array.",
+    base_price: 899.00,
+    brand: "Nova Mobile",
+    is_featured: true,
+    images: [{ id: "img-2", product_id: "feat-2", image_url: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800", is_primary: true, display_order: 0 }],
+    variants: [{ id: "var-2", product_id: "feat-2", title: "Titanium Blue", sku: "NOVA-TITAN-BLU", price: 899.00, stock_quantity: 30 }],
+    category: { id: "cat-1", name: "Electronics & Smart Audio", slug: "electronics" },
+  },
+  {
+    id: "feat-3",
+    title: "Minimalist Italian Wool Overcoat - Camel",
+    slug: "cashmere-wool-overcoat",
+    description: "Double-faced virgin Italian wool tailored overcoat with unconstructed shoulders.",
+    base_price: 495.00,
+    brand: "Sartorial Atelier",
+    is_featured: true,
+    images: [{ id: "img-3", product_id: "feat-3", image_url: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800", is_primary: true, display_order: 0 }],
+    variants: [{ id: "var-3", product_id: "feat-3", title: "Camel / Medium", sku: "SART-COAT-CAM", price: 495.00, stock_quantity: 18 }],
+    category: { id: "cat-2", name: "Fashion & Luxury Apparel", slug: "fashion" },
+  },
+  {
+    id: "feat-4",
+    title: "Ergonomic Solid Oak Motorized Standing Desk",
+    slug: "solid-oak-standing-desk",
+    description: "Solid sustainably harvested white oak work surface with dual ultra-quiet German motors.",
+    base_price: 749.00,
+    brand: "Nordic Atelier",
+    is_featured: true,
+    images: [{ id: "img-4", product_id: "feat-4", image_url: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800", is_primary: true, display_order: 0 }],
+    variants: [{ id: "var-4", product_id: "feat-4", title: "Natural Oak 60x30", sku: "NORD-DESK-60", price: 749.00, stock_quantity: 12 }],
+    category: { id: "cat-3", name: "Home Living & Decor", slug: "home-living" },
+  },
+  {
+    id: "feat-5",
+    title: "15% Bio-Active Vitamin C Radiance Serum",
+    slug: "vitamin-c-radiance-serum",
+    description: "Cold-pressed ferulic acid and hyaluronic acid antioxidant morning renewal serum.",
+    base_price: 68.00,
+    brand: "Lumina Skin Lab",
+    is_featured: true,
+    images: [{ id: "img-5", product_id: "feat-5", image_url: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800", is_primary: true, display_order: 0 }],
+    variants: [{ id: "var-5", product_id: "feat-5", title: "30ml Dropper", sku: "LUM-VTC-30", price: 68.00, stock_quantity: 75 }],
+    category: { id: "cat-4", name: "Beauty & Wellness", slug: "beauty-wellness" },
+  },
+  {
+    id: "feat-6",
+    title: "Carbon Plate Marathon Trail Running Shoes",
+    slug: "trail-running-shoes-carbon",
+    description: "Vibram Megagrip lugged outsole with dual-density supercritical foam and full-length carbon plate.",
+    base_price: 210.00,
+    brand: "Apex Endurance",
+    is_featured: true,
+    images: [{ id: "img-6", product_id: "feat-6", image_url: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800", is_primary: true, display_order: 0 }],
+    variants: [{ id: "var-6", product_id: "feat-6", title: "US 10.5 / Solar Red", sku: "APEX-RUN-105", price: 210.00, stock_quantity: 24 }],
+    category: { id: "cat-5", name: "Sports & Fitness", slug: "sports-outdoors" },
+  },
+  {
+    id: "feat-7",
+    title: "Ethiopian Yirgacheffe Natural Whole Bean Coffee",
+    slug: "ethiopian-yirgacheffe-coffee",
+    description: "Single-origin Grade 1 heirloom micro-lot with jasmine, bergamot, and sweet stone fruit notes.",
+    base_price: 26.00,
+    brand: "Origin Roast Lab",
+    is_featured: true,
+    images: [{ id: "img-7", product_id: "feat-7", image_url: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800", is_primary: true, display_order: 0 }],
+    variants: [{ id: "var-7", product_id: "feat-7", title: "12oz Whole Bean", sku: "ORIG-COF-12", price: 26.00, stock_quantity: 80 }],
+    category: { id: "cat-6", name: "Gourmet Provisions", slug: "gourmet-provisions" },
+  },
+  {
+    id: "feat-8",
+    title: "Tradizionale 25-Year Aged Balsamic of Modena DOP",
+    slug: "aged-balsamic-vinegar-modena",
+    description: "Aged in sequential cherry, chestnut, and juniper wood casks with deep velvet viscosity.",
+    base_price: 135.00,
+    brand: "Acetaia Reale",
+    is_featured: true,
+    images: [{ id: "img-8", product_id: "feat-8", image_url: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800", is_primary: true, display_order: 0 }],
+    variants: [{ id: "var-8", product_id: "feat-8", title: "100ml Wax Sealed Flask", sku: "MOD-BAL-100", price: 135.00, stock_quantity: 15 }],
+    category: { id: "cat-6", name: "Gourmet Provisions", slug: "gourmet-provisions" },
+  },
+] as unknown as Product[];
+
+const DEPARTMENT_FALLBACK_MAP: Record<string, Product[]> = {
+  electronics: DEFAULT_FEATURED_PRODUCTS.slice(0, 4),
+  fashion: [DEFAULT_FEATURED_PRODUCTS[2], DEFAULT_FEATURED_PRODUCTS[0], DEFAULT_FEATURED_PRODUCTS[1], DEFAULT_FEATURED_PRODUCTS[3]],
+  "home-living": [DEFAULT_FEATURED_PRODUCTS[3], DEFAULT_FEATURED_PRODUCTS[0], DEFAULT_FEATURED_PRODUCTS[1], DEFAULT_FEATURED_PRODUCTS[4]],
+  "beauty-wellness": [DEFAULT_FEATURED_PRODUCTS[4], DEFAULT_FEATURED_PRODUCTS[0], DEFAULT_FEATURED_PRODUCTS[1], DEFAULT_FEATURED_PRODUCTS[6]],
+  "sports-outdoors": [DEFAULT_FEATURED_PRODUCTS[5], DEFAULT_FEATURED_PRODUCTS[0], DEFAULT_FEATURED_PRODUCTS[1], DEFAULT_FEATURED_PRODUCTS[2]],
+  "gourmet-provisions": [DEFAULT_FEATURED_PRODUCTS[6], DEFAULT_FEATURED_PRODUCTS[7], DEFAULT_FEATURED_PRODUCTS[0], DEFAULT_FEATURED_PRODUCTS[1]],
+};
+
 export default function HomePage() {
   const [categories, setCategories] = useState<Category[]>([]);
-  const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
-  const [departmentProducts, setDepartmentProducts] = useState<Product[]>([]);
+  const [featuredProducts, setFeaturedProducts] = useState<Product[]>(DEFAULT_FEATURED_PRODUCTS);
+  const [departmentProducts, setDepartmentProducts] = useState<Product[]>(DEPARTMENT_FALLBACK_MAP["electronics"]);
   const [activeDepartment, setActiveDepartment] = useState<string>("electronics");
   const [isDeptLoading, setIsDeptLoading] = useState(false);
   const [vendors, setVendors] = useState<VendorPublic[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     async function loadData() {
-      setIsLoading(true);
       try {
         const prodRes = await api.get("/products/list?page_size=12");
-        if (prodRes.data?.success && prodRes.data?.data?.items) {
+        if (prodRes.data?.success && prodRes.data?.data?.items && prodRes.data.data.items.length > 0) {
           setFeaturedProducts(prodRes.data.data.items);
         }
       } catch (err) {
@@ -58,8 +165,6 @@ export default function HomePage() {
         }
       } catch (err) {
         console.error("Failed to load vendors for home page:", err);
-      } finally {
-        setIsLoading(false);
       }
     }
     loadData();
@@ -69,9 +174,13 @@ export default function HomePage() {
   useEffect(() => {
     async function loadDepartmentProducts() {
       setIsDeptLoading(true);
+      // Pre-set matching department fallback for immediate UI feedback
+      if (DEPARTMENT_FALLBACK_MAP[activeDepartment]) {
+        setDepartmentProducts(DEPARTMENT_FALLBACK_MAP[activeDepartment]);
+      }
       try {
         const res = await api.get(`/products/list?category_id=${activeDepartment}&page_size=4`);
-        if (res.data?.success && res.data?.data?.items) {
+        if (res.data?.success && res.data?.data?.items && res.data.data.items.length > 0) {
           setDepartmentProducts(res.data.data.items);
         }
       } catch (err) {
